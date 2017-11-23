@@ -1,0 +1,51 @@
+------Start of DE processing------ = [11/23/17 17:37:08:494 CST]
+Exception = javax.servlet.ServletException
+Source = com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters
+probeid = 1064
+Stack Dump = javax.servlet.ServletException: Resource configuration class org.tec.datos1.messenger.webapi.resources could not be loaded.
+	at org.glassfish.jersey.servlet.WebComponent.createResourceConfig(WebComponent.java:544)
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:299)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:178)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:370)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:297)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:598)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:440)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1138)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4938)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:316)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:990)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:281)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:960)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:362)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:321)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:499)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:433)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:313)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:284)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:165)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:74)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:503)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:573)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:928)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1017)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: org.tec.datos1.messenger.webapi.resources
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:504)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:276)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:482)
+	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:443)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.glassfish.jersey.internal.util.ReflectionHelper$7.run(ReflectionHelper.java:408)
+	at org.glassfish.jersey.internal.util.ReflectionHelper$7.run(ReflectionHelper.java:398)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.glassfish.jersey.servlet.WebComponent.createResourceConfig(WebComponent.java:531)
+	... 28 more
+
+Dump of callerThis
+null

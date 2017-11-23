@@ -1,0 +1,59 @@
+------Start of DE processing------ = [11/23/17 17:38:00:010 CST]
+Exception = javax.servlet.ServletException
+Source = com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters
+probeid = 1064
+Stack Dump = javax.servlet.ServletException: SRVE0207E: No se ha detectado la excepción de inicialización creada por el servlet
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:366)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:598)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:440)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1138)
+	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4938)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:316)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:990)
+	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:281)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:960)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:362)
+	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:321)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:499)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:433)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:313)
+	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:284)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:165)
+	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:74)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:503)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:573)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:928)
+	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1017)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: A MultiException has 1 exceptions.  They are:
+1. java.lang.NoSuchMethodException: Could not find a suitable constructor in org.tec.datos1.messenger.webapi.resources.Application class.
+
+	at org.jvnet.hk2.internal.Collector.throwIfErrors(Collector.java:89)
+	at org.jvnet.hk2.internal.Utilities.justCreate(Utilities.java:1068)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.create(ServiceLocatorImpl.java:978)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.createAndInitialize(ServiceLocatorImpl.java:1082)
+	at org.jvnet.hk2.internal.ServiceLocatorImpl.createAndInitialize(ServiceLocatorImpl.java:1074)
+	at org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.createAndInitialize(AbstractHk2InjectionManager.java:213)
+	at org.glassfish.jersey.inject.hk2.ImmediateHk2InjectionManager.createAndInitialize(ImmediateHk2InjectionManager.java:54)
+	at org.glassfish.jersey.server.ApplicationConfigurator.createApplication(ApplicationConfigurator.java:138)
+	at org.glassfish.jersey.server.ApplicationConfigurator.init(ApplicationConfigurator.java:96)
+	at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$0(ApplicationHandler.java:313)
+	at java.util.Arrays$ArrayList.forEach(Arrays.java:3880)
+	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:313)
+	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:282)
+	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:335)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:178)
+	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:370)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:297)
+	... 23 more
+Caused by: java.lang.NoSuchMethodException: Could not find a suitable constructor in org.tec.datos1.messenger.webapi.resources.Application class.
+	at org.glassfish.jersey.inject.hk2.JerseyClassAnalyzer.getConstructor(JerseyClassAnalyzer.java:192)
+	at org.jvnet.hk2.internal.Utilities.getConstructor(Utilities.java:180)
+	at org.jvnet.hk2.internal.Utilities.justCreate(Utilities.java:1066)
+	... 39 more
+
+Dump of callerThis
+null
