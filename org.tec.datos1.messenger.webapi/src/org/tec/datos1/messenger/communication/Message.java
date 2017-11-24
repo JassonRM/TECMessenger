@@ -1,28 +1,28 @@
 package org.tec.datos1.messenger.communication;
 
 public class Message {
-	private String destinatario;
+	private String receiver;
 	private String content;
-	private String otros;
+	private String others;
 	
 	
-	public String getDestinatario() {
-		return destinatario;
+	public String getReceiver() {
+		return receiver;
 	}
-	public void setDestinatario(String destinatario) {
-		this.destinatario = destinatario;
+	public void setReceiver(String destinatario) {
+		this.receiver = destinatario;
 	}
 	public String getContent() {
 		return content;
 	}
-	public void setConteto(String content) {
+	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getOtros() {
-		return otros;
+	public String getOthers() {
+		return others;
 	}
-	public void setOtros(String otros) {
-		this.otros = otros;
+	public void setOthers(String others) {
+		this.others = others;
 	}
 	
 }
