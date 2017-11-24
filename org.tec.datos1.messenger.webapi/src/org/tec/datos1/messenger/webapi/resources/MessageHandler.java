@@ -21,7 +21,7 @@ public class MessageHandler {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getHello() {
+	public Response getMessages() {
 		return Response.ok()
 				.entity(messages)
 				.build();
@@ -30,7 +30,7 @@ public class MessageHandler {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Response createEstudiante(Message message) {
+	public Response createMessage(Message message) {
 		messages.add(message);
 		return Response.ok()
 				.build();
