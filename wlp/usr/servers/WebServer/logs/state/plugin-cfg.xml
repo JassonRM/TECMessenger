@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for WebServer generated on 2017.11.23 at 17:49:26 CST-->
+<?xml version="1.0" encoding="UTF-8"?><!--HTTP server plugin config file for WebServer generated on 2017.11.24 at 15:20:57 CST-->
 <Config ASDisableNagle="false" AcceptAllContent="false" AppServerPortPreference="HostHeader" ChunkedResponse="false" FIPSEnable="false" IISDisableNagle="false" IISPluginPriority="High" IgnoreDNSFailures="false" RefreshInterval="60" ResponseChunkSize="64" SSLConsolidate="false" TrustedProxyEnable="false" VHostMatchingCompat="false">
    <Log LogLevel="Error" Name="/opt/IBM/WebSphere/Plugins/logs/webserver1/http_plugin.log"/>
    <Property Name="ESIEnable" Value="true"/>
@@ -16,7 +16,7 @@
       <VirtualHost Name="*:443"/>
    </VirtualHostGroup>
    <ServerCluster CloneSeparatorChange="false" GetDWLMTable="false" IgnoreAffinityRequests="true" LoadBalance="Round Robin" Name="WebServer_default_node_Cluster" PostBufferSize="0" PostSizeLimit="-1" RemoveSpecialHeaders="true" RetryInterval="60" ServerIOTimeoutRetry="-1">
-      <Server CloneID="886f854d-b6cd-4a0e-8d3f-794e8d8602da" ConnectTimeout="5" ExtendedHandshake="false" LoadBalanceWeight="20" MaxConnections="-1" Name="default_node_WebServer" ServerIOTimeout="900" WaitForContinue="false">
+      <Server CloneID="2b5f6156-5774-4b50-b016-82194957b774" ConnectTimeout="5" ExtendedHandshake="false" LoadBalanceWeight="20" MaxConnections="-1" Name="default_node_WebServer" ServerIOTimeout="900" WaitForContinue="false">
          <Transport Hostname="localhost" Port="9080" Protocol="http"/>
          <Transport Hostname="localhost" Port="9443" Protocol="https">
             <Property Name="keyring" Value="/opt/IBM/WebSphere/Plugins/config/webserver1/plugin-key.kdb"/>

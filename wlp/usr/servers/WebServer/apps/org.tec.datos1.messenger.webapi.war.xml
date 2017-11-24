@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive>
-    <dir sourceOnDisk="/Users/Jai/Library/Mobile Documents/com~apple~CloudDocs/Datos I/TEC Messenger/org.tec.datos1.messenger.webapi/WebContent" targetInArchive="/"/>
-    <dir sourceOnDisk="/Users/Jai/Library/Mobile Documents/com~apple~CloudDocs/Datos I/TEC Messenger/org.tec.datos1.messenger.webapi/build/classes" targetInArchive="/WEB-INF/classes"/>
+    <dir sourceOnDisk="C:\Users\Marco Herrera\git\TECMessenger\org.tec.datos1.messenger.webapi\WebContent" targetInArchive="/"/>
+    <dir sourceOnDisk="C:\Users\Marco Herrera\git\TECMessenger\org.tec.datos1.messenger.webapi\build\classes" targetInArchive="/WEB-INF/classes"/>
 </archive>

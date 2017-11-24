@@ -1,0 +1,13 @@
+
+arg0=--batch-file=--stop
+arg1=stop
+arg2=WebServer
+exit=1
+
+                 Java home:  C:\Program Files\Java\jre1.8.0_131
+              Install root:  C:/Users/Marco Herrera/git/TECMessenger/wlp/
+          System libraries:  C:/Users/Marco Herrera/git/TECMessenger/wlp/lib/
+                 User root:  C:/Users/Marco Herrera/git/TECMessenger/wlp/usr/
+                    Config:  C:/Users/Marco Herrera/git/TECMessenger/wlp/usr/servers/WebServer/
+                    Output:  C:/Users/Marco Herrera/git/TECMessenger/wlp/usr/servers/WebServer/
+
