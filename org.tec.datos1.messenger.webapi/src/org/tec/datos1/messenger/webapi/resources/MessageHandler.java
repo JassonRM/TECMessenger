@@ -18,7 +18,6 @@ import javax.ws.rs.POST;
 public class MessageHandler {
 	private static List<Message> messages = new ArrayList<>();
 	
-	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getMessages() {

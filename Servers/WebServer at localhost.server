@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<server auto-publish-setting="2" auto-publish-time="1" hostname="localhost" id="WebServer at localhost" looseConfig="true" name="WebServer at localhost" runtime-id="WebSphere" server-type="com.ibm.ws.st.server.wlp" server-type-id="com.ibm.ws.st.server.wlp" serverName="WebServer" serverType="libertyServer" start-timeout="60" stop-timeout="15" stopOnShutdown="false" timestamp="5" userDirId="WebSphere">
+<server auto-publish-setting="2" auto-publish-time="1" hostname="localhost" id="WebServer at localhost" looseConfig="true" name="WebServer at localhost" publishWithError="false" runtime-id="WebSphere" server-type="com.ibm.ws.st.server.wlp" server-type-id="com.ibm.ws.st.server.wlp" serverName="WebServer" serverType="libertyServer" start-timeout="60" stop-timeout="15" stopOnShutdown="false" timestamp="9" userDirId="WebSphere">
   <list key="modules" value0="org.tec.datos1.messenger.webapi::org.eclipse.jst.jee.server:org.tec.datos1.messenger.webapi::jst.web::3.0"/>
 </server>

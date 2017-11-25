@@ -3,7 +3,7 @@ package org.tec.datos1.messenger.estructures;
 import java.util.ArrayList;
 
 public class NodoGrafo<T> {
-T valor;
+public T valor;
 ArrayList<Arco<NodoGrafo<T>>> arcos = new ArrayList<>();
 public NodoGrafo(T valor) {
 	this.valor= valor;
@@ -24,14 +24,10 @@ public void connect(NodoGrafo<T>elemento,int peso) {
  * @return
  */
 public NodoGrafo<T> search(T valor,NodoGrafo<T> Nodo){
-	try {
-	if(Nodo.valor.equals(valor)) {
+	if(Nodo == null) {
+		return null;
+	}else if(Nodo.valor.equals(valor)) {
 		return Nodo;
-	}}
-	catch(Exception e) {
-		if(Nodo.valor == valor) {
-			return Nodo;
-		}
 	}
 	ArrayList<NodoGrafo<T>> visitados = new ArrayList<>();
 	Cola<NodoGrafo<T>> examinar = new Cola<>();
@@ -69,6 +65,8 @@ private NodoGrafo<T> sarch2(T valor, ArrayList<NodoGrafo<T>> visitados, Cola<Nod
 	}
 	
 }
+
+
 /**
  * Metodo auxiliar para comprobar el valor de un nodo u otro
  * @param nodo
@@ -109,7 +107,7 @@ public NodoGrafo<T> delete(T valor,NodoGrafo<T> Nodo){
 	}
 /**
  * 
- * @param valor valor a liminar
+ * @param valor valor a eliminar
  * @param visitados es una lista que contiene los nodos visitados
  * @param examinar son los nodos a examinar
  * @return
