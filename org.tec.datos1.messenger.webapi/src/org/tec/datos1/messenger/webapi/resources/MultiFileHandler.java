@@ -19,6 +19,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
+@Path("/messages/files")
 public class MultiFileHandler {
 	private static final String UPLOAD_FOLDER = "DEFINAN EL FOLDER DENTRO DEL SERVER";
 	@Context
@@ -26,6 +27,13 @@ public class MultiFileHandler {
 
 	@POST
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
+	/**
+	 * Hace que se suba cualquier file
+	 * @param uploadedInputStream
+	 * @param fileDetail
+	 * @return
+	 */
+	@Path("/messages/files/upload")
 	public Response uploadFile(
 			@FormDataParam("file") InputStream uploadedInputStream,
 			@FormDataParam("file") FormDataContentDisposition fileDetail) {
@@ -47,7 +55,12 @@ public class MultiFileHandler {
 		return Response.status(200)
 				.entity("Guardado en " + uploadedFileLocation).build();
 	}
-
+/**
+ * Crea el file a partir de lo optenido
+ * @param inStream
+ * @param target
+ * @throws IOException
+ */
 	private void saveToFile(InputStream inStream, String target)
 			throws IOException {
 		OutputStream out = null;
