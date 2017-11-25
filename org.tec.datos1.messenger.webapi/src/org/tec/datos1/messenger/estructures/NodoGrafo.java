@@ -94,6 +94,7 @@ private boolean compruebavalor(NodoGrafo<T> nodo, T valor2) {
 public NodoGrafo<T> delete(T valor,NodoGrafo<T> Nodo){
 	try {
 	if(Nodo.valor.equals(valor)) {
+		
 	}}
 	catch(Exception e) {
 		if(Nodo.valor == valor) {
@@ -113,6 +114,7 @@ public NodoGrafo<T> delete(T valor,NodoGrafo<T> Nodo){
  * @return
  */
 private NodoGrafo<T> delete2(T valor, ArrayList<NodoGrafo<T>> visitados, Cola<NodoGrafo<T>> examinar) {
+	
 	if(examinar.lista.isEmpty()) {
 		return null;
 	}
@@ -128,6 +130,9 @@ private NodoGrafo<T> delete2(T valor, ArrayList<NodoGrafo<T>> visitados, Cola<No
 				examinar.queue(arco.llegada);
 			}
 			}
+		}
+		if(nodo.valor.equals(valor)) {
+			nodo.arcos.clear();
 		}
 			return sarch2(valor,visitados,examinar);
 	}

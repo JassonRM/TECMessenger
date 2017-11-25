@@ -1,4 +1,4 @@
-package org.tec.datos1.messenger.communication;
+package org.tec.datos1.messenger.dto;
 
 public class Message {
 	private String receiver;
