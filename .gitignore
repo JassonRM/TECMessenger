@@ -1,3 +1,4 @@
 /.metadata/
 /.recommenders/
-/wlp/usr/servers/
+/wlp/usr/servers/WebServer/apps/
+/wlp/usr/servers/WebServer/workarea/
