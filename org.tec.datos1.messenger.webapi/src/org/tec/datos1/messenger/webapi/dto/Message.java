@@ -1,13 +1,22 @@
 package org.tec.datos1.messenger.webapi.dto;
 
+import java.util.ArrayList;
+
 public class Message {
 	private String receiver;
 	private String sender;
 	private String date;
+	private ArrayList<String> path ;
 	private String Audio;
 	private String File;
 	private String body;
 	private String image;
+	public ArrayList<String> getPath() {
+		return this.path;
+	}
+	public void setPath(ArrayList<String> lista) {
+		 this.path =lista ;
+	}
 	public String getReceiver() {
 		return receiver;
 	}
