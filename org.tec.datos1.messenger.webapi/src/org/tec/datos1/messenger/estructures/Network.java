@@ -23,7 +23,9 @@ public class Network extends Graph<User> {
 		}
 		return null;
 	}
-	
+	/**
+	 * Reconecta un camino que a sido cortado en la eliminacion de algun nodo.
+	 */
 	public void reconnect() {
 		Random randomGenerator = new Random();
 		for(Vertex<User> nodo : getVertices()) {
