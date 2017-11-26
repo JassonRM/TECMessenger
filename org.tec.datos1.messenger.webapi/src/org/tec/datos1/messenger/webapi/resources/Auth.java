@@ -12,12 +12,11 @@ import javax.ws.rs.core.Response;
 import javax.servlet.http.HttpServletRequest;
 
 import org.tec.datos1.messenger.estructures.Network;
-import org.tec.datos1.messenger.estructures.NodoGrafo;
 import org.tec.datos1.messenger.webapi.dto.User;
 
 @Path("/auth")
 public class Auth {
-	private static Network centralNode = null;
+	private static Network users;
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -25,12 +24,12 @@ public class Auth {
 	public Response login(@Context HttpServletRequest request, User newUser) {
 		String ipAddress = request.getRemoteAddr();
 
-		if(centralNode != null) {
-			Network user = centralNode.searchByUsername(newUser.getUsername(), centralNode);
+		if(users != null) {
+			User user = users.searchByUsername(newUser.getUsername());
 			if(user != null){
 				return Response.status(401).build();
 			}
-			Network ipUser = centralNode.searchByIpAddress(ipAddress, centralNode);
+			User ipUser = users.searchByIpAddress(ipAddress);
 			if(ipUser != null) {
 				return Response.status(409).build();
 			}
@@ -39,20 +38,21 @@ public class Auth {
 
 
 		newUser.setIpAddress(ipAddress);
-		Network node = new Network(newUser);
-		if(centralNode == null) {
-			centralNode = node;
-		}else {
-			centralNode.connect(node, 0); //Hay que cambiarlo para que no solo se conecte al mismo nodo
+		if(users == null) {
+			users = new Network();
 		}
+		
+		users.addVertex(newUser);
+		 //Hay que cambiarlo para que no solo se conecte al mismo nodo
+		
 		return Response.ok().build();
 	}
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getUsers() {
-		if(centralNode != null) {
-			return Response.ok(centralNode.valor).build();
+		if(users != null) {
+			return Response.ok(users.getVertices().get(0)).build();
 		}else {
 			return Response.noContent().build();
 		}
@@ -61,10 +61,10 @@ public class Auth {
 	@DELETE
 	public Response logout(@Context HttpServletRequest request) {
 		String ipAddress = request.getRemoteAddr();
-		if(centralNode != null) {
-			NodoGrafo<User> ipUser = centralNode.searchByIpAddress(ipAddress, centralNode);
+		if(users != null) {
+			User ipUser = users.searchByIpAddress(ipAddress);
 			if(ipUser != null) {
-				centralNode.delete(ipUser.valor, centralNode);
+				users.removeVertex(ipUser);
 				return Response.ok("Logout successful").build();
 			}
 		}

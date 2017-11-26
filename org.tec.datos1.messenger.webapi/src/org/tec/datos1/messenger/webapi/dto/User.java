@@ -2,7 +2,7 @@ package org.tec.datos1.messenger.webapi.dto;
 
 import java.util.ArrayList;
 
-public class User {
+public class User implements Comparable<User>{
 	String username;
 	String ipAddress;
 	String path;
@@ -36,5 +36,11 @@ public class User {
 	}
 	public void clearMessages() {
 		toReceive.clear();
+	}
+
+	@Override
+	public int compareTo(User o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

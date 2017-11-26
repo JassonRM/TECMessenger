@@ -1,8 +1,0 @@
-
- Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
-------+------+---------------------------+---------------------------+---------------------------
-     0    108   24/11/17 12:45:55:414 CST   24/11/17 14:58:52:828 CST java.lang.IllegalArgumentException com.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets 529
-                                                                            - C:\Users\Marco Herrera\git\TECMessenger\wlp\usr\servers\WebServer\logs\ffdc\ffdc_17.11.24_12.45.55.0.log
-     1      3   24/11/17 12:46:34:762 CST   24/11/17 12:49:05:816 CST javax.servlet.ServletException com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters 1064
-                                                                            - C:\Users\Marco Herrera\git\TECMessenger\wlp\usr\servers\WebServer\logs\ffdc\ffdc_17.11.24_12.46.34.0.log
-------+------+---------------------------+---------------------------+---------------------------

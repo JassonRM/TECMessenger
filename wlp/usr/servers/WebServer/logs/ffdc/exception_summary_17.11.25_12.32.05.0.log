@@ -1,0 +1,8 @@
+
+ Index  Count  Time of first Occurrence    Time of last Occurrence     Exception SourceId ProbeId
+------+------+---------------------------+---------------------------+---------------------------
+     0    216   11/25/17 12:32:05:346 CST   11/25/17 22:04:16:034 CST java.lang.IllegalArgumentException com.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets 529
+                                                                            - /Users/Jai/Library/Mobile Documents/com~apple~CloudDocs/Datos I/TEC Messenger/wlp/usr/servers/WebServer/logs/ffdc/ffdc_17.11.25_12.32.05.0.log
+     1      7   11/25/17 12:32:28:541 CST   11/25/17 12:58:43:971 CST javax.servlet.ServletException com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters 1064
+                                                                            - /Users/Jai/Library/Mobile Documents/com~apple~CloudDocs/Datos I/TEC Messenger/wlp/usr/servers/WebServer/logs/ffdc/ffdc_17.11.25_12.32.28.0.log
+------+------+---------------------------+---------------------------+---------------------------
