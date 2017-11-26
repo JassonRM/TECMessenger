@@ -43,7 +43,7 @@ public class Auth {
 		}
 		
 		users.addVertex(newUser);
-		 //Hay que cambiarlo para que no solo se conecte al mismo nodo
+		users.reconnect();
 		
 		return Response.ok().build();
 	}
@@ -65,6 +65,7 @@ public class Auth {
 			User ipUser = users.searchByIpAddress(ipAddress);
 			if(ipUser != null) {
 				users.removeVertex(ipUser);
+				users.reconnect();
 				return Response.ok("Logout successful").build();
 			}
 		}

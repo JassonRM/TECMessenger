@@ -1,6 +1,7 @@
 package org.tec.datos1.messenger.estructures;
 
 import org.tec.datos1.messenger.webapi.dto.User;
+import java.util.Random;
 
 public class Network extends Graph<User> {
 	public User searchByUsername(String username) {
@@ -21,5 +22,19 @@ public class Network extends Graph<User> {
 			}
 		}
 		return null;
+	}
+	
+	public void reconnect() {
+		Random randomGenerator = new Random();
+		for(Vertex<User> nodo : getVertices()) {
+			int count = 0;
+			Vertex<User> second = getVertices().get(randomGenerator.nextInt(getVertices().size() - 1));
+			while(count < 3) {
+				if(second != nodo) {
+					nodo.addEdge(new Edge<User>(second, randomGenerator.nextInt(20)));
+				}
+				count++;
+			}
+		}
 	}
 }
