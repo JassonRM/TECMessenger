@@ -56,7 +56,7 @@ public class MultiFileHandler {
 				.entity("Guardado en " + uploadedFileLocation).build();
 	}
 /**
- * Crea el file a partir de lo optenido
+ * Crea el file a partir de lo obtenido
  * @param inStream
  * @param target
  * @throws IOException

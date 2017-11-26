@@ -23,10 +23,10 @@ public class ImageHandler {
 	@GET
 	@Path("/getImage")
 	@Produces( "Image/png")
-	public File returnImage(String name) {
+	public File returnImage(String name,String userID) {
 		String path;//Hay que definir el path a una carpeta y imagen
 		
-		File file = new File("null");
+		File file = new File("path" );
 		return file;
 	}
 @POST
