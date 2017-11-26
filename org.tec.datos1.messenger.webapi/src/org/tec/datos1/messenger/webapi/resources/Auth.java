@@ -45,7 +45,7 @@ public class Auth {
 		}else {
 			centralNode.connect(node, 0); //Hay que cambiarlo para que no solo se conecte al mismo nodo
 		}
-		return Response.accepted().build();
+		return Response.ok().build();
 	}
 	
 	@GET
