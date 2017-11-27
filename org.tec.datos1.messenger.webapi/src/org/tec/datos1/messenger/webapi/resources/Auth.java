@@ -16,7 +16,7 @@ import org.tec.datos1.messenger.webapi.dto.User;
 
 @Path("/auth")
 public class Auth {
-	private static Network users;
+	public static Network users;
 	/**
 	 * Usuario envia un request al server generando un nuevo nodo en el grafo del server
 	 * @param request
@@ -41,7 +41,6 @@ public class Auth {
 			
 		}
 
-
 		newUser.setIpAddress(ipAddress);
 		if(users == null) {
 			users = new Network();
@@ -57,7 +56,7 @@ public class Auth {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getUsers() {
 		if(users != null) {
-			return Response.ok(users.getVertices().get(0)).build();
+			return Response.ok(users.toArray()).build();
 		}else {
 			return Response.noContent().build();
 		}
@@ -67,12 +66,8 @@ public class Auth {
 	public Response logout(@Context HttpServletRequest request) {
 		String ipAddress = request.getRemoteAddr();
 		if(users != null) {
-			User ipUser = users.searchByIpAddress(ipAddress);
-			if(ipUser != null) {
-				users.removeVertex(ipUser);
-				users.reconnect();
-				return Response.ok("Logout successful").build();
-			}
+			users.removeVertexByIpAddress(ipAddress);
+			return Response.ok("Logout successful").build();
 		}
 		return Response.noContent().build();
 	}
