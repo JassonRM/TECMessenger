@@ -34,6 +34,11 @@ public class MessageHandler {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
+	/**
+	 * Recibe un mensaje, si no viene con un path se determina un path y se envia al usuario
+	 * @param message
+	 * @return
+	 */
 	public Response createMessage(Message message) {
 		//Esto es cuando se recibe el mensaje al server por primera vez, se determina el path de un solo 
 		if(message.getPath().isEmpty()) {
