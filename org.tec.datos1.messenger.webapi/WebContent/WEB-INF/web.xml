@@ -14,7 +14,10 @@
     			<param-name>jersey.config.server.provider.classnames</param-name>
     			<param-value>org.glassfish.jersey.media.multipart.MultiPartFeature</param-value>
 		</init-param>
-
+<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>org.tec.datos1.messenger.webapi.resources.ImageHandler</param-value>
+		</init-param>
 		
 	</servlet>
 	<servlet-mapping>
