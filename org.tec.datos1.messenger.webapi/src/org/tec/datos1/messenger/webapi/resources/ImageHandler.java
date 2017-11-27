@@ -6,12 +6,15 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import org.glassfish.jersey.media.multipart.*;
 @Path("/messages/images")
@@ -27,7 +30,7 @@ public class ImageHandler {
 	@GET
 	@Path("/getImage")
 	@Produces( "Image/png")
-	public File returnImage() {
+	public File returnImage(@Context String request) {
 		String path;//Hay que definir el path a una carpeta y imagen
 		
 		File file = new File("path" );
