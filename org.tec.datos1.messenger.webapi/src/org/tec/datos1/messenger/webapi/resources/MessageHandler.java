@@ -36,10 +36,12 @@ public class MessageHandler {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response createMessage(Message message) {
-//		Graph<User> x = new Graph<>();
-//		Vertex destinatario = x.getVertex(message.getReceiver());
-		User y = new User();//Ser cambiado por el nodo buscado en destinatario
-		y.addMessage(message);
+		if(message.getPath().isEmpty()) {
+			User sender = Auth.users.searchByUsername(message.getSender());
+			User receiver = Auth.users.searchByUsername(message.getReceiver());
+			Auth.users.
+		}
+		
 		return Response.ok()
 				.build();
 	}
