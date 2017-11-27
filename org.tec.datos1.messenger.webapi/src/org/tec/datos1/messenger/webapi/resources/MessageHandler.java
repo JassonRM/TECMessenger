@@ -11,6 +11,7 @@ import org.tec.datos1.messenger.webapi.dto.Message;
 import org.tec.datos1.messenger.webapi.dto.User;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -23,11 +24,13 @@ public class MessageHandler {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-//	public Response getMessages(String UserID) {
-	public Response getMessages() {
-
-//		Vertex destinatario = """GRAFO CENTRAL""".getVertex(UserID);
-		User usuario = new User();//Ser cambiado por el nodo buscado en destinatario
+////	public Response getMessages(String UserID) {
+//	public Response getMessages() {
+//
+////		Vertex destinatario = """GRAFO CENTRAL""".getVertex(UserID);
+//		User usuario = new User();//Ser cambiado por el nodo buscado en destinatario
+	public Response getMessages(String Username) {
+		User usuario = Auth.users.searchByUsername(Username);
 		return Response.ok()
 				.entity(usuario.getMessages())
 				.build();
@@ -36,11 +39,33 @@ public class MessageHandler {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
+	/**
+	 * Recibe un mensaje, si no viene con un path se determina un path y se envia al usuario
+	 * @param message
+	 * @return
+	 */
 	public Response createMessage(Message message) {
-//		Graph<User> x = new Graph<>();
-//		Vertex destinatario = x.getVertex(message.getReceiver());
-		User y = new User();//Ser cambiado por el nodo buscado en destinatario
-		y.addMessage(message);
+		//Esto es cuando se recibe el mensaje al server por primera vez, se determina el path de un solo 
+		if(message.getPath().isEmpty()) {
+			//Determino los dos nodos que son el que recibe y el que envia
+			Vertex<User> sender = Auth.users.searchByUsernameNode(message.getSender());
+			Vertex<User> receiver = Auth.users.searchByUsernameNode(message.getReceiver());
+			//Saco la lista de nodos a los cuales tiene que pasar hasta llegar
+			LinkedList<Vertex<User>> list = Auth.users.Floyd(sender, receiver);
+			ArrayList<String> names = new ArrayList<>();
+			//La paso a lista de usuarios
+			for(Vertex<User> usuarios : list) {
+				names.add(usuarios.getValue().getUsername());
+			}
+			//Determino el camino
+			message.setPath(names);
+		}
+		//Determino el siguiente usuario al que debo de enviarlo
+		User nextNode = Auth.users.searchByUsername(message.getPath().get(0));
+		//Lo elimino
+		message.getPath().remove(0);
+		//Lo anado al usuario para que lo reenvie posteriormente al detectar que no es el usuario al que se supone le debe enviar
+		nextNode.addMessage(message);
 		return Response.ok()
 				.build();
 	}
