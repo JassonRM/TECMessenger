@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public class Graph<T extends Comparable<T>> {
 	
-	private LinkedList<Vertex<T>> vertices = new LinkedList<>();
+	protected LinkedList<Vertex<T>> vertices = new LinkedList<>();
 	
 	
 	public LinkedList<Vertex<T>> getVertices() {
