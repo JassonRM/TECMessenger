@@ -15,7 +15,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.glassfish.jersey.client.internal.jdkconnector.*;
-import org.glassfish.jersey.media.*;
+import org.glassfish.jersey.media.multipart.FormDataParam;
 
 import com.sun.jersey.core.header.FormDataContentDisposition;
 @Path("/messages/images")
@@ -30,7 +30,8 @@ public class ImageHandler {
 	@GET
 	@Path("/getImage")
 	@Produces( "Image/png")
-	public File returnImage(String name,String userID) {
+//	public File returnImage(String name,String userID) {
+	public File returnImage() {
 		String path;//Hay que definir el path a una carpeta y imagen
 		
 		File file = new File("path" );
@@ -45,8 +46,8 @@ public class ImageHandler {
 @POST
 @Path("/upload")
 @Consumes(MediaType.MULTIPART_FORM_DATA)
-public String uploadFile(@FormParam("File") InputStream uploadedInputStream,
-		@FormParam("File") FormDataContentDisposition   filedetails) {
+public String uploadFile(@FormDataParam("File") InputStream uploadedInputStream,
+		@FormDataParam("File") FormDataContentDisposition   filedetails) {
 	saveOnDisk(uploadedInputStream,filedetails);
 	return "Done";
 }

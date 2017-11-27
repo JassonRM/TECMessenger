@@ -23,7 +23,8 @@ public class MessageHandler {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getMessages(String UserID) {
+//	public Response getMessages(String UserID) {
+	public Response getMessages() {
 
 //		Vertex destinatario = """GRAFO CENTRAL""".getVertex(UserID);
 		User usuario = new User();//Ser cambiado por el nodo buscado en destinatario
