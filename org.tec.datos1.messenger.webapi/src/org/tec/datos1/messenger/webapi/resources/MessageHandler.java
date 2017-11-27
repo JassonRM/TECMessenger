@@ -15,6 +15,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 
@@ -22,20 +23,20 @@ import javax.ws.rs.POST;
 public class MessageHandler {
 	private static List<Message> messages = new ArrayList<>();
 	
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
+//	@GET
+//	@Produces(MediaType.APPLICATION_JSON)
 ////	public Response getMessages(String UserID) {
 //	public Response getMessages() {
 //
 ////		Vertex destinatario = """GRAFO CENTRAL""".getVertex(UserID);
 //		User usuario = new User();//Ser cambiado por el nodo buscado en destinatario
-	public Response getMessages(String Username) {
-		User usuario = Auth.users.searchByUsername(Username);
-		return Response.ok()
-				.entity(usuario.getMessages())
-				.build();
-	}
-	
+//	public Response getMessages() {
+//		User usuario = Auth.users.searchByUsername(Username);
+//		return Response.ok()
+//				.entity(usuario.getMessages())
+//				.build();
+//	}
+//	
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -44,7 +45,7 @@ public class MessageHandler {
 	 * @param message
 	 * @return
 	 */
-	public Response createMessage(Message message) {
+	public Response createMessage(@FormParam("Message") Message message) {
 		//Esto es cuando se recibe el mensaje al server por primera vez, se determina el path de un solo 
 		if(message.getPath().isEmpty()) {
 			//Determino los dos nodos que son el que recibe y el que envia

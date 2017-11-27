@@ -2,11 +2,12 @@ package org.tec.datos1.messenger.webapi.resources;
 
 import javax.ws.rs.POST;
 
+
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 
-import com.sun.jersey.core.header.FormDataContentDisposition;
-import com.sun.jersey.multipart.FormDataParam;
+import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
+import org.glassfish.jersey.media.multipart.FormDataParam;
 
 import java.io.File;
 import java.io.FileOutputStream;

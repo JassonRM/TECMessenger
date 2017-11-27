@@ -26,7 +26,7 @@ public class ImageHandler {
 	@GET
 	@Path("/getImage")
 	@Produces( "Image/png")
-	public File returnImage(String name,String userID) {
+	public File returnImage() {
 		String path;//Hay que definir el path a una carpeta y imagen
 		
 		File file = new File("path" );
