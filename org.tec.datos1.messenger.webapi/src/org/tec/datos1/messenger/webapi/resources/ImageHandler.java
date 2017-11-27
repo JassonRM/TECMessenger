@@ -1,11 +1,10 @@
 package org.tec.datos1.messenger.webapi.resources;
 
 import java.io.File;
+
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.URL;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -13,13 +12,10 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import org.glassfish.jersey.client.internal.jdkconnector.*;
-import org.glassfish.jersey.media.*;
-
 import com.sun.jersey.core.header.FormDataContentDisposition;
 @Path("/messages/images")
 public class ImageHandler {
+	
 	/**
 	 * Retorna una imagen segun el nomrbre de la imagen solicitada el cual esta en el json
 	 * y el id del usuario el cual lo pondra en la aplicacion
