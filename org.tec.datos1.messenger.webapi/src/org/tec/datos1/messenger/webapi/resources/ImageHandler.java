@@ -2,6 +2,7 @@ package org.tec.datos1.messenger.webapi.resources;
 
 import java.io.File;
 
+
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -12,12 +13,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import org.glassfish.jersey.client.internal.jdkconnector.*;
-import org.glassfish.jersey.media.multipart.FormDataParam;
-import com.sun.jersey.core.header.FormDataContentDisposition;
-
-
 @Path("/messages/images")
 public class ImageHandler {
 	
@@ -31,8 +26,7 @@ public class ImageHandler {
 	@GET
 	@Path("/getImage")
 	@Produces( "Image/png")
-//	public File returnImage(String name,String userID) {
-	public File returnImage() {
+	public File returnImage(String name,String userID) {
 		String path;//Hay que definir el path a una carpeta y imagen
 		
 		File file = new File("path" );
@@ -47,8 +41,8 @@ public class ImageHandler {
 @POST
 @Path("/upload")
 @Consumes(MediaType.MULTIPART_FORM_DATA)
-public String uploadFile(@FormDataParam("File") InputStream uploadedInputStream,
-		@FormDataParam("File") FormDataContentDisposition   filedetails) {
+public String uploadFile(@FormParam("File") InputStream uploadedInputStream,
+		@FormParam("File") org.glassfish.jersey.media.multipart.FormDataContentDisposition   filedetails) {
 	saveOnDisk(uploadedInputStream,filedetails);
 	return "Done";
 }
@@ -57,7 +51,7 @@ public String uploadFile(@FormDataParam("File") InputStream uploadedInputStream,
  * @param uploadedInputStream
  * @param filedetails
  */
-static void saveOnDisk(InputStream uploadedInputStream,FormDataContentDisposition filedetails  ) {
+static void saveOnDisk(InputStream uploadedInputStream,org.glassfish.jersey.media.multipart.FormDataContentDisposition filedetails  ) {
 	String pathtosave = "lugar que se guardaran" + filedetails.getFileName();
 	try {
 		OutputStream out = new FileOutputStream(new File(pathtosave));
