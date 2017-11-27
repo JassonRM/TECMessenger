@@ -13,6 +13,15 @@ public class Network extends Graph<User> {
 		}
 		return null;
 	}
+	public Vertex<User> searchByUsernameNode(String username) {
+		
+		for(Vertex<User> nodo : getVertices()) {
+			if (nodo.getValue().getUsername().equals(username)) {
+				return nodo;
+			}
+		}
+		return null;
+	}
 	
 	public User searchByIpAddress(String ipAddress) {
 		Vertex<User> node = searchNodeByIpAddress(ipAddress);
