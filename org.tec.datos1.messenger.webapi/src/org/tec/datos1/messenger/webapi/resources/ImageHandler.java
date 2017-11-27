@@ -13,6 +13,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import org.glassfish.jersey.media.multipart.*;
 @Path("/messages/images")
 public class ImageHandler {
 	
@@ -41,8 +42,8 @@ public class ImageHandler {
 @POST
 @Path("/upload")
 @Consumes(MediaType.MULTIPART_FORM_DATA)
-public String uploadFile(@FormParam("File") InputStream uploadedInputStream,
-		@FormParam("File") org.glassfish.jersey.media.multipart.FormDataContentDisposition   filedetails) {
+public String uploadFile(@FormDataParam("File") InputStream uploadedInputStream,
+		@FormDataParam("File") org.glassfish.jersey.media.multipart.FormDataContentDisposition   filedetails) {
 	saveOnDisk(uploadedInputStream,filedetails);
 	return "Done";
 }

@@ -19,6 +19,8 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 
+import org.glassfish.jersey.media.multipart.*;
+
 @Path("/messages")
 public class MessageHandler {
 	private static List<Message> messages = new ArrayList<>();
@@ -45,7 +47,7 @@ public class MessageHandler {
 	 * @param message
 	 * @return
 	 */
-	public Response createMessage(@FormParam("Message") Message message) {
+	public Response createMessage(@FormDataParam("Message") Message message) {
 		//Esto es cuando se recibe el mensaje al server por primera vez, se determina el path de un solo 
 		if(message.getPath().isEmpty()) {
 			//Determino los dos nodos que son el que recibe y el que envia
