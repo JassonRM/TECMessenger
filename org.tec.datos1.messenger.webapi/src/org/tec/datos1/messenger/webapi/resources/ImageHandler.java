@@ -30,7 +30,7 @@ public class ImageHandler {
 	 */
 	@GET
 	@Path("/getImage")
-	@Produces( "Image/png")
+	@Produces( MediaType.MULTIPART_FORM_DATA)
 	public File returnImage(@Context HttpServletRequest request) {
 		User usuario = Auth.users.searchByIpAddress(request.getRemoteAddr());
 		String path= "PATH QUE DEBE DE SER DEFINIDO EN LA PC" + usuario.files.get(0);
