@@ -49,6 +49,7 @@ public class MessageHandler {
 	 * @return
 	 */
 	public Response createMessage(@FormDataParam("Message") Message message) {
+		try {
 		//Esto es cuando se recibe el mensaje al server por primera vez, se determina el path de un solo 
 		if(message.getPath().isEmpty()) {
 			//Determino los dos nodos que son el que recibe y el que envia
@@ -72,6 +73,10 @@ public class MessageHandler {
 		nextNode.addMessage(message);
 		return Response.ok()
 				.build();
+		}catch(Exception e) {
+			return Response.serverError().build();
+		}
+		
 	}
 	
 }
