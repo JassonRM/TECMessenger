@@ -85,7 +85,7 @@ public class MessageHandler {
 		return Response.ok()
 				.build();
 		}catch(Exception e) {
-			System.out.println("No hay usuarios y no hay nada por lo que hara un catch a eso i manda error ");
+			System.out.println("No hay usuarios y no hay nada por lo que hara un catch a eso y manda error ");
 			return Response.serverError().build();
 		}
 		
