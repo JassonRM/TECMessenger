@@ -16,7 +16,7 @@ import org.tec.datos1.messenger.webapi.dto.User;
 
 @Path("/auth")
 public class Auth {
-	public static Network users;
+	public static Network users = new Network();
 	/**
 	 * Usuario envia un request al server generando un nuevo nodo en el grafo del server
 	 * @param request

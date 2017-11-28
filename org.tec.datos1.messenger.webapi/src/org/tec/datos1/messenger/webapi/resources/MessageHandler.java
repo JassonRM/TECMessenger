@@ -16,6 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -34,10 +35,20 @@ public class MessageHandler {
 
 			
 	public Response getMessages(@Context HttpServletRequest request) {
+		if(request ==null) {
+			System.out.println("ERROR no");
+			return null;
+		}
+		
 		User usuario = Auth.users.searchByIpAddress(request.getRemoteAddr());
+		try {
 		return Response.ok()
 				.entity(usuario.getMessages())
-				.build();
+				.build();}
+		catch(Exception e) {
+			Response.noContent().build();
+		}
+		return null;
 	}
 	
 	@POST
@@ -74,6 +85,7 @@ public class MessageHandler {
 		return Response.ok()
 				.build();
 		}catch(Exception e) {
+			System.out.println("No hay usuarios y no hay nada por lo que hara un catch a eso i manda error ");
 			return Response.serverError().build();
 		}
 		
