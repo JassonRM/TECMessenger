@@ -17,6 +17,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import org.glassfish.jersey.media.multipart.*;
+import org.tec.datos1.messenger.webapi.dto.User;
 @Path("/messages/images")
 public class ImageHandler {
 	
@@ -30,10 +31,11 @@ public class ImageHandler {
 	@GET
 	@Path("/getImage")
 	@Produces( "Image/png")
-	public File returnImage(@Context String request) {
-		String path;//Hay que definir el path a una carpeta y imagen
-		
-		File file = new File("path" );
+	public File returnImage(@Context HttpServletRequest request) {
+		User usuario = Auth.users.searchByIpAddress(request.getRemoteAddr());
+		String path= "PATH QUE DEBE DE SER DEFINIDO EN LA PC" + usuario.files.get(0);
+		usuario.files.remove(0);
+		File file = new File(path);
 		return file;
 	}
 	/**

@@ -73,10 +73,25 @@ public class MessageHandler {
 			for(Vertex<User> usuarios : list) {
 				names.add(usuarios.getValue().getUsername());
 			}
+			names.add(message.getReceiver());
 			//Determino el camino
 			message.setPath(names);
 		}
+		Vertex<User> receiver = Auth.users.searchByUsernameNode(message.getReceiver());
 		//Determino el siguiente usuario al que debo de enviarlo
+		if( (!message.getAudio().equals(null) && !message.getAudio().equals(""))  ) {
+			receiver.getValue().addFileName(message.getAudio());
+			
+		}
+		if( (!message.getImage().equals(null) && !message.getImage().equals(""))  ) {
+			receiver.getValue().addFileName(message.getImage());
+			
+		}
+		if( (!message.getFile().equals(null) && !message.getFile().equals(""))  ) {
+			receiver.getValue().addFileName(message.getFile());
+			
+		}
+		
 		User nextNode = Auth.users.searchByUsername(message.getPath().get(0));
 		//Lo elimino
 		message.getPath().remove(0);

@@ -6,7 +6,11 @@ public class User implements Comparable<User>{
 	String username;
 	String ipAddress;
 	String path;
+	public ArrayList<String> files = new ArrayList<>();
 	ArrayList<Message> toReceive = new ArrayList<>();;
+	public void addFileName(String file) {
+		files.add(file);
+	}
 	public String getUsername() {
 		return username;
 	}
