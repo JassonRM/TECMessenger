@@ -23,7 +23,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 @Path("/messages/files")
 public class MultiFileHandler {
-	private static final String UPLOAD_FOLDER = "DEFINAN EL FOLDER DENTRO DEL SERVER";
+	private static final String UPLOAD_FOLDER = "C:\\Users\\kenne\\Desktop\\lol\\";
 	@Context
 	private UriInfo context;
 
@@ -35,7 +35,7 @@ public class MultiFileHandler {
 	 * @param fileDetail
 	 * @return
 	 */
-	@Path("/messages/files/upload")
+	@Path("/upload")
 	public Response uploadFile(
 			@FormDataParam("file") InputStream uploadedInputStream,
 			@FormDataParam("file") FormDataContentDisposition fileDetail) {
@@ -52,6 +52,7 @@ public class MultiFileHandler {
 		try {
 			saveToFile(uploadedInputStream, uploadedFileLocation);
 		} catch (IOException e) {
+			e.printStackTrace();
 			return Response.status(500).entity("No se pudo guardar").build();
 		}
 		return Response.status(200)
