@@ -1,26 +1,28 @@
 package org.tec.datos1.messenger.webapi.resources;
 
 import javax.ws.rs.POST;
-
-
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
+import org.glassfish.jersey.media.multipart.MultiPart;
+import org.tec.datos1.messenger.webapi.dto.User;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.core.Context;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
+
 @Path("/messages/files")
 public class MultiFileHandler {
 	private static final String UPLOAD_FOLDER = "C:\\Users\\kenne\\Desktop\\lol\\";
@@ -87,4 +89,36 @@ public class MultiFileHandler {
 			theDir.mkdir();
 		}
 	}
+	
+	
+	@GET
+	@Produces("multipart/mixed")
+	public Response getFile(@Context HttpServletRequest request) {
+		if(request ==null) {
+			System.out.println("ERROR");
+			return null;
+		}
+		
+		User usuario = Auth.users.searchByIpAddress(request.getRemoteAddr());
+		try {
+			
+			File objFile = new File(usuario.getFiles().get(0));
+			usuario.getFiles().remove(0);
+			
+			MultiPart objMultiPart = new MultiPart();
+			
+			objMultiPart.type(new MediaType("multipart", "mixed"));
+			
+			objMultiPart.bodyPart(objFile.getName(), new MediaType("text", "plain"));
+			
+			objMultiPart.bodyPart(objFile.length(), new MediaType("text", "plain"));
+			
+			objMultiPart.bodyPart(objFile, new MediaType("multipart", "mixed"));
+	
+			return Response.ok(objMultiPart).build();
+		}catch(Exception e) {
+			return Response.noContent().build();
+		}
+	}
+		
 }
