@@ -42,10 +42,12 @@ public class MultiFileHandler {
 			@FormDataParam("file") InputStream uploadedInputStream,
 			@FormDataParam("file") FormDataContentDisposition fileDetail) {
 		if (uploadedInputStream == null || fileDetail == null)
+			
 			return Response.status(400).entity("Tipo invalido").build();
 		try {
 			createFolderIfNotExists(UPLOAD_FOLDER);
 		} catch (SecurityException se) {
+			se.printStackTrace();
 			return Response.status(500)
 					.entity("No se puede crear folder en el server")
 					.build();
@@ -57,6 +59,7 @@ public class MultiFileHandler {
 			e.printStackTrace();
 			return Response.status(500).entity("No se pudo guardar").build();
 		}
+		System.out.println("SE GUARDO");
 		return Response.status(200)
 				.entity("Guardado en " + uploadedFileLocation).build();
 	}
