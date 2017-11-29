@@ -73,6 +73,7 @@ public class Auth {
 		return Response.noContent().build();
 	}
 	@GET
+	@Path("/auth/cosult")
 	public Response consultChanges(@Context HttpServletRequest request) {
 		String ipAddress = request.getRemoteAddr();
 		User ipUser = users.searchByIpAddress(ipAddress);
