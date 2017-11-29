@@ -9,14 +9,20 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.tec.datos1.messenger.estructures.Network;
+import org.tec.datos1.messenger.webapi.dto.Message;
 import org.tec.datos1.messenger.webapi.dto.User;
 
 @Path("/auth")
 public class Auth {
 	public static Network users = new Network();
+	public static List<Message> allMessages = new ArrayList<>(); 
 	/**
 	 * Usuario envia un request al server generando un nuevo nodo en el grafo del server
 	 * @param request
@@ -42,6 +48,7 @@ public class Auth {
 		}
 
 		newUser.setIpAddress(ipAddress);
+		newUser.fillMessages();
 		if(users == null) {
 			users = new Network();
 		}

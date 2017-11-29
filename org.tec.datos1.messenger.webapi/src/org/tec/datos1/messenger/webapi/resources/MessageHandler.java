@@ -52,6 +52,7 @@ public class MessageHandler {
 		try {
 		//Esto es cuando se recibe el mensaje al server por primera vez, se determina el path de un solo 
 		if(message.getPath() == null || message.getPath().isEmpty()) {
+			Auth.allMessages.add(message);
 			//Determino los dos nodos que son el que recibe y el que envia
 			Vertex<User> sender = Auth.users.searchByUsernameNode(message.getSender());
 			Vertex<User> receiver = Auth.users.searchByUsernameNode(message.getReceiver());
@@ -62,9 +63,10 @@ public class MessageHandler {
 			for(Vertex<User> usuarios : list) {
 				names.add(usuarios.getValue().getUsername());
 			}
-			names.add(message.getReceiver());
 			//Determino el camino
+			names.remove(0);//elimina el sender
 			message.setPath(names);
+			
 		}
 		Vertex<User> receiver = Auth.users.searchByUsernameNode(message.getReceiver());
 		//Determino el siguiente usuario al que debo de enviarlo

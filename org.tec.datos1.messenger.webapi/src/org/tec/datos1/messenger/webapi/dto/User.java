@@ -2,13 +2,26 @@ package org.tec.datos1.messenger.webapi.dto;
 
 import java.util.ArrayList;
 
+import org.tec.datos1.messenger.estructures.AVLTree;
+import org.tec.datos1.messenger.estructures.BTree;
+import org.tec.datos1.messenger.estructures.BinaryTree;
+import org.tec.datos1.messenger.estructures.SplayTree;
+import org.tec.datos1.messenger.webapi.resources.Auth;
+
 public class User implements Comparable<User>{
 	String username;
 	String ipAddress;
 	String path;
+	
+	public SplayTree<Message> sentMessages = new SplayTree<>();
+	public AVLTree<Message> errorSentMessages = new AVLTree<>();
+	public BinaryTree<Message> bridgeMessages = new BinaryTree<>();
+	public BTree<Message> receivedMessages = new BTree<>(5);
+	
 	private ArrayList<String> files = new ArrayList<>();
 	ArrayList<Message> toReceive = new ArrayList<>();;
 	public Boolean changes = false;
+	
 	public void swichChange() {
 		if(changes) {
 			changes = false;
@@ -60,5 +73,21 @@ public class User implements Comparable<User>{
 	public int compareTo(User o) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	public void fillMessages() {
+		for (Message message: Auth.allMessages) {
+			if (message.getReceiver().equals(username)) {
+				receivedMessages.append(message);
+			}else if (message.getSender().equals(username)) {
+				sentMessages.append(message);
+			}else{
+				for(String path : message.getPath()) {
+					if (path.equals(username)) {
+						bridgeMessages.append(message);
+					}
+				}	
+			}
+		}
+		
 	}
 }
