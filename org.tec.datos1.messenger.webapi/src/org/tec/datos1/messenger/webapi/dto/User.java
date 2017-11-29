@@ -6,10 +6,10 @@ public class User implements Comparable<User>{
 	String username;
 	String ipAddress;
 	String path;
-	public ArrayList<String> files = new ArrayList<>();
+	private ArrayList<String> files = new ArrayList<>();
 	ArrayList<Message> toReceive = new ArrayList<>();;
 	public void addFileName(String file) {
-		files.add(file);
+		getFiles().add(file);
 	}
 	public String getUsername() {
 		return username;
@@ -42,6 +42,12 @@ public class User implements Comparable<User>{
 		toReceive.clear();
 	}
 
+	public ArrayList<String> getFiles() {
+		return files;
+	}
+	public void setFiles(ArrayList<String> files) {
+		this.files = files;
+	}
 	@Override
 	public int compareTo(User o) {
 		// TODO Auto-generated method stub
