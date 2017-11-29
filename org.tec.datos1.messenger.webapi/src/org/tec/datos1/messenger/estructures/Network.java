@@ -50,7 +50,8 @@ public class Network extends Graph<User> {
 		for(Vertex<User> nodo : getVertices()) {
 			int count = 0;
 			Vertex<User> second = getVertices().get(randomGenerator.nextInt(Math.max(getVertices().size() - 1, 1)));
-			while(count < 3) {
+			System.out.println(getVertices().size());
+			while(count < 3 && getVertices().size() - count > 1) {
 				if(second != nodo) {
 					nodo.addEdge(new Edge<User>(second, randomGenerator.nextInt(20)));
 				}

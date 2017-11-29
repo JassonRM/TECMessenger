@@ -5,23 +5,23 @@ java.home = /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre
 java.version = 1.8.0_144
 java.runtime = Java(TM) SE Runtime Environment (1.8.0_144-b01)
 os = Mac OS X (10.13.1; x86_64) (es_ES)
-process = 15200@Macbook-Pro-de-Jasson.local
+process = 72134@Macbook-Pro-de-Jasson.local
 ********************************************************************************
-[11/26/17 20:54:34:344 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server WebServer has been launched.
-[11/26/17 20:54:34:370 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/17.0.0.3/lafiles/es.html
-[11/26/17 20:54:36:248 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 2.284 seconds
-[11/26/17 20:54:36:290 CST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: La actualización de características se ha iniciado.
-[11/26/17 20:54:37:624 CST] 00000010 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: El servicio de seguridad se está iniciando...
-[11/26/17 20:54:38:554 CST] 0000001e com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: La configuración de LTPA estará lista después de 0.088 segundos.
-[11/26/17 20:54:38:589 CST] 00000010 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: Se ha activado el plugin de autenticación colectivo con el nombre de clase NullCollectiveAuthenticationPlugin. 
-[11/26/17 20:54:39:115 CST] 00000010 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Supervisando aplicaciones de dropins. 
-[11/26/17 20:54:39:381 CST] 0000001a com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: El canal TCP defaultHttpEndpoint se ha iniciado y ahora está a la escucha de solicitudes en el host *  (IPv6) puerto 9080.
-[11/26/17 20:54:40:563 CST] 00000010 com.ibm.ws.cache.ServerCache                                 I DYNA1001I: La instancia de memoria caché dinámica de WebSphere con nombre baseCache se ha inicializado correctamente.
-[11/26/17 20:54:40:568 CST] 00000010 com.ibm.ws.cache.ServerCache                                 I DYNA1071I: Se está utilizando el proveedor de memoria caché default.
-[11/26/17 20:54:40:573 CST] 00000010 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: La memoria caché dinámica (memoria caché de objeto) se ha inicializado correctamente.
-[11/26/17 20:54:41:244 CST] 0000001f com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Iniciando la aplicación org.tec.datos1.messenger.webapi.
-[11/26/17 20:54:42:100 CST] 0000001f com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "java.lang.IllegalArgumentException com.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets 529" en ffdc_17.11.26_20.54.41.0.log
-[11/26/17 20:54:42:112 CST] 0000001f m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
+[11/28/17 22:41:10:203 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server WebServer has been launched.
+[11/28/17 22:41:10:226 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/17.0.0.3/lafiles/es.html
+[11/28/17 22:41:12:678 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 2.806 seconds
+[11/28/17 22:41:12:728 CST] 0000001a com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: La actualización de características se ha iniciado.
+[11/28/17 22:41:14:329 CST] 00000013 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: El servicio de seguridad se está iniciando...
+[11/28/17 22:41:15:754 CST] 00000023 com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: La configuración de LTPA estará lista después de 0.137 segundos.
+[11/28/17 22:41:15:792 CST] 00000013 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: Se ha activado el plugin de autenticación colectivo con el nombre de clase NullCollectiveAuthenticationPlugin. 
+[11/28/17 22:41:16:594 CST] 00000013 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Supervisando aplicaciones de dropins. 
+[11/28/17 22:41:16:944 CST] 0000001f com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: El canal TCP defaultHttpEndpoint se ha iniciado y ahora está a la escucha de solicitudes en el host *  (IPv6) puerto 9080.
+[11/28/17 22:41:19:049 CST] 00000013 com.ibm.ws.cache.ServerCache                                 I DYNA1001I: La instancia de memoria caché dinámica de WebSphere con nombre baseCache se ha inicializado correctamente.
+[11/28/17 22:41:19:054 CST] 00000013 com.ibm.ws.cache.ServerCache                                 I DYNA1071I: Se está utilizando el proveedor de memoria caché default.
+[11/28/17 22:41:19:056 CST] 00000013 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: La memoria caché dinámica (memoria caché de objeto) se ha inicializado correctamente.
+[11/28/17 22:41:19:856 CST] 0000001d com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Iniciando la aplicación org.tec.datos1.messenger.webapi.
+[11/28/17 22:41:20:876 CST] 0000001d com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "java.lang.IllegalArgumentException com.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets 529" en ffdc_17.11.28_22.41.20.0.log
+[11/28/17 22:41:20:883 CST] 0000001d m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
@@ -58,8 +58,8 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 .
-[11/26/17 20:54:43:241 CST] 0000001f org.jboss.weld.Version                                       I WELD-000900: 2.4.3 (Final)
-[11/26/17 20:54:43:586 CST] 0000001f m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
+[11/28/17 22:41:22:242 CST] 0000001d org.jboss.weld.Version                                       I WELD-000900: 2.4.3 (Final)
+[11/28/17 22:41:22:760 CST] 0000001d m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
@@ -96,7 +96,7 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 .
-[11/26/17 20:54:43:709 CST] 0000001f m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
+[11/28/17 22:41:22:815 CST] 0000001d m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
@@ -133,7 +133,7 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 .
-[11/26/17 20:54:43:725 CST] 0000001f m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
+[11/28/17 22:41:22:836 CST] 0000001d m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
@@ -170,7 +170,7 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 .
-[11/26/17 20:54:43:971 CST] 0000001f m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
+[11/28/17 22:41:23:110 CST] 0000001d m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
@@ -207,7 +207,7 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 .
-[11/26/17 20:54:47:498 CST] 0000001f m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
+[11/28/17 22:41:29:711 CST] 0000001d m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
@@ -261,8 +261,6 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.WebSphereCDIDeploymentImpl.scan(WebSphereCDIDeploymentImpl.java:587)
 	at com.ibm.ws.cdi.impl.CDIContainerImpl.applicationStarting(CDIContainerImpl.java:120)
 	at com.ibm.ws.cdi.liberty.CDIRuntimeImpl.applicationStarting(CDIRuntimeImpl.java:379)
@@ -278,7 +276,7 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 .
-[11/26/17 20:54:47:658 CST] 0000001f m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
+[11/28/17 22:41:30:004 CST] 0000001d m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
@@ -323,9 +321,6 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.WebSphereCDIDeploymentImpl.scan(WebSphereCDIDeploymentImpl.java:587)
 	at com.ibm.ws.cdi.impl.CDIContainerImpl.applicationStarting(CDIContainerImpl.java:120)
 	at com.ibm.ws.cdi.liberty.CDIRuntimeImpl.applicationStarting(CDIRuntimeImpl.java:379)
@@ -341,7 +336,7 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 .
-[11/26/17 20:54:47:672 CST] 0000001f m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
+[11/28/17 22:41:30:023 CST] 0000001d m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
@@ -383,10 +378,6 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.WebSphereCDIDeploymentImpl.scan(WebSphereCDIDeploymentImpl.java:587)
 	at com.ibm.ws.cdi.impl.CDIContainerImpl.applicationStarting(CDIContainerImpl.java:120)
 	at com.ibm.ws.cdi.liberty.CDIRuntimeImpl.applicationStarting(CDIRuntimeImpl.java:379)
@@ -402,7 +393,7 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 .
-[11/26/17 20:54:47:774 CST] 0000001f m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
+[11/28/17 22:41:30:059 CST] 0000001d m.ibm.ws.anno.targets.internal.AnnotationTargetsImpl_Targets W CWWKC0044W: Se ha producido una excepción durante la exploración de datos de anotaciones y clases. La excepción ha sido java.lang.IllegalArgumentException
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
 	at org.objectweb.asm.ClassReader.<init>(Unknown Source)
@@ -440,8 +431,6 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
-	at com.ibm.ws.cdi.impl.weld.BeanDeploymentArchiveImpl.scan(BeanDeploymentArchiveImpl.java:304)
 	at com.ibm.ws.cdi.impl.weld.WebSphereCDIDeploymentImpl.scan(WebSphereCDIDeploymentImpl.java:587)
 	at com.ibm.ws.cdi.impl.CDIContainerImpl.applicationStarting(CDIContainerImpl.java:120)
 	at com.ibm.ws.cdi.liberty.CDIRuntimeImpl.applicationStarting(CDIRuntimeImpl.java:379)
@@ -457,62 +446,35 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 .
-[11/26/17 20:54:48:532 CST] 0000001f com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "java.lang.NoClassDefFoundError: org/jvnet/mimepull/MIMEParsingException com.ibm.ws.injectionengine.InjectionProcessorManager.getAllDeclaredFields 249" en ffdc_17.11.26_20.54.48.0.log
-[11/26/17 20:54:48:532 CST] 0000001f com.ibm.ws.injectionengine.InjectionProcessorManager         W CWNEN0047W: Se ignorarán las notaciones de recursos de los campos de la clase org.glassfish.jersey.media.multipart.internal.MultiPartReaderClientSide. Las notaciones no se han podido obtener debido a la excepción: java.lang.NoClassDefFoundError: org/jvnet/mimepull/MIMEParsingException
-[11/26/17 20:54:48:554 CST] 0000001f com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "java.lang.NoClassDefFoundError: org/jvnet/mimepull/MIMEParsingException com.ibm.wsspi.injectionengine.MethodMap.getAllDeclaredMethods 106" en ffdc_17.11.26_20.54.48.1.log
-[11/26/17 20:54:48:554 CST] 0000001f com.ibm.wsspi.injectionengine.MethodMap                      W CWNEN0049W: Se ignorarán las notaciones de recursos de los métodos de la clase org.glassfish.jersey.media.multipart.internal.MultiPartReaderClientSide. Las notaciones no se han podido obtener debido a la excepción: java.lang.NoClassDefFoundError: org/jvnet/mimepull/MIMEParsingException
-[11/26/17 20:54:48:558 CST] 0000001f com.ibm.ws.injectionengine.InjectionProcessorManager         W CWNEN0047W: Se ignorarán las notaciones de recursos de los campos de la clase org.glassfish.jersey.media.multipart.internal.MultiPartReaderServerSide. Las notaciones no se han podido obtener debido a la excepción: java.lang.NoClassDefFoundError: org/jvnet/mimepull/MIMEParsingException
-[11/26/17 20:54:48:559 CST] 0000001f com.ibm.ws.injectionengine.InjectionProcessorManager         W CWNEN0048W: Se ignorarán las notaciones de recursos de los campos de la clase org.glassfish.jersey.media.multipart.internal.MultiPartReaderClientSide. Se está procesando la clase org.glassfish.jersey.media.multipart.internal.MultiPartReaderClientSide para las notaciones debido a que la clase de aplicación org.glassfish.jersey.media.multipart.internal.MultiPartReaderServerSide hace referencia a la misma. Las notaciones no se han podido obtener debido a la excepción: java.lang.NoClassDefFoundError: org/jvnet/mimepull/MIMEParsingException
-[11/26/17 20:54:48:561 CST] 0000001f com.ibm.wsspi.injectionengine.MethodMap                      W CWNEN0049W: Se ignorarán las notaciones de recursos de los métodos de la clase org.glassfish.jersey.media.multipart.internal.MultiPartReaderServerSide. Las notaciones no se han podido obtener debido a la excepción: java.lang.NoClassDefFoundError: org/jvnet/mimepull/MIMEParsingException
-[11/26/17 20:54:49:875 CST] 0000001f com.ibm.ws.session.WASSessionCore                            I SESN8501I: El gestor de sesiones no ha encontrado una ubicación de almacenamiento persistente; los objetos HttpSession se almacenarán en la memoria del servidor de aplicaciones local.
-[11/26/17 20:54:49:898 CST] 0000001f com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Cargando módulo web: org.tec.datos1.messenger.webapi.
-[11/26/17 20:54:49:904 CST] 0000001f com.ibm.ws.webcontainer                                      I SRVE0250I: El módulo web org.tec.datos1.messenger.webapi se ha enlazado con default_host.
-[11/26/17 20:54:49:905 CST] 0000001f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Aplicación web disponible (default_host): http://192.168.100.5:9080/webapi/
-[11/26/17 20:54:49:915 CST] 0000001f com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: La aplicación org.tec.datos1.messenger.webapi se ha iniciado en 8.671 segundos.
-[11/26/17 20:54:49:947 CST] 0000001b com.ibm.ws.session.WASSessionCore                            I SESN0176I: Se creará un nuevo contexto de sesión para la clave de aplicación default_host/webapi
-[11/26/17 20:54:49:949 CST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: El servidor ha instalado las características siguientes: [jsp-2.3, ejbLite-3.2, managedBeans-1.0, servlet-3.1, jsf-2.2, beanValidation-1.1, ssl-1.0, jndi-1.0, localConnector-1.0, appSecurity-2.0, jsonp-1.0, jdbc-4.1, jaxrs-2.0, el-3.0, jaxrsClient-2.0, json-1.0, jpaContainer-2.1, cdi-1.2, distributedMap-1.0, webProfile-7.0, websocket-1.1, jpa-2.1].
-[11/26/17 20:54:49:952 CST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: La actualización de características se ha completado en 13.702 segundos.
-[11/26/17 20:54:49:952 CST] 00000017 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: El servidor WebServer está preparado para ejecutar un planeta más inteligente.
-[11/26/17 20:54:49:972 CST] 0000001b com.ibm.ws.util                                              I SESN0172I: El gestor de sesiones está utilizando la implementación de SecureRandom Java por omisión para la generación del ID de sesión.
-[11/26/17 20:54:50:280 CST] 0000001b com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: La memoria caché dinámica (memoria caché de objeto) se ha inicializado correctamente.
-[11/26/17 20:54:50:369 CST] 0000001a com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: Se ha generado automáticamente un archivo de configuración para un plug-in de servidor web para este servidor en /Users/Jai/Library/Mobile Documents/com~apple~CloudDocs/Datos I/TEC Messenger/wlp/usr/servers/WebServer/logs/state/plugin-cfg.xml.
-[11/26/17 20:54:55:399 CST] 00000018 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "java.lang.NoClassDefFoundError: org/jvnet/mimepull/MIMEParsingException com.ibm.ws.webcontainer.servlet.ServletWrapper.init 181" en ffdc_17.11.26_20.54.55.0.log
-[11/26/17 20:54:55:399 CST] 00000018 com.ibm.ws.webcontainer.servlet                              E SRVE0271E: El servlet [RESTful Jersey Servlet] no ha detectado la excepción init() en la aplicación [org.tec.datos1.messenger.webapi]: java.lang.NoClassDefFoundError: org/jvnet/mimepull/MIMEParsingException
-	at java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
-	at java.lang.Class.getDeclaredMethods(Class.java:1975)
-	at org.glassfish.jersey.server.model.IntrospectionModeller$2.run(IntrospectionModeller.java:255)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.glassfish.jersey.server.model.IntrospectionModeller.getAllDeclaredMethods(IntrospectionModeller.java:249)
-	at org.glassfish.jersey.server.model.IntrospectionModeller.checkForNonPublicMethodIssues(IntrospectionModeller.java:174)
-	at org.glassfish.jersey.server.model.IntrospectionModeller.doCreateResourceBuilder(IntrospectionModeller.java:121)
-	at org.glassfish.jersey.server.model.IntrospectionModeller.access$000(IntrospectionModeller.java:82)
-	at org.glassfish.jersey.server.model.IntrospectionModeller$1.call(IntrospectionModeller.java:114)
-	at org.glassfish.jersey.server.model.IntrospectionModeller$1.call(IntrospectionModeller.java:111)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:316)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:298)
-	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:256)
-	at org.glassfish.jersey.server.model.IntrospectionModeller.createResourceBuilder(IntrospectionModeller.java:111)
-	at org.glassfish.jersey.server.model.Resource.from(Resource.java:800)
-	at org.glassfish.jersey.server.ResourceBagConfigurator.init(ResourceBagConfigurator.java:79)
-	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:354)
-	at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:316)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:316)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:298)
-	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:256)
-	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:315)
-	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:282)
-	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:335)
-	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:178)
-	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:370)
-	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:297)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:598)
+[11/28/17 22:41:33:060 CST] 0000001d com.ibm.ws.session.WASSessionCore                            I SESN8501I: El gestor de sesiones no ha encontrado una ubicación de almacenamiento persistente; los objetos HttpSession se almacenarán en la memoria del servidor de aplicaciones local.
+[11/28/17 22:41:33:103 CST] 0000001d com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Cargando módulo web: org.tec.datos1.messenger.webapi.
+[11/28/17 22:41:33:110 CST] 0000001d com.ibm.ws.webcontainer                                      I SRVE0250I: El módulo web org.tec.datos1.messenger.webapi se ha enlazado con default_host.
+[11/28/17 22:41:33:116 CST] 0000001d com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Aplicación web disponible (default_host): http://192.168.100.5:9080/webapi/
+[11/28/17 22:41:33:139 CST] 0000001d com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: La aplicación org.tec.datos1.messenger.webapi se ha iniciado en 13.284 segundos.
+[11/28/17 22:41:33:168 CST] 0000001b com.ibm.ws.session.WASSessionCore                            I SESN0176I: Se creará un nuevo contexto de sesión para la clave de aplicación default_host/webapi
+[11/28/17 22:41:33:200 CST] 0000001a com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: El servidor ha instalado las características siguientes: [jsp-2.3, ejbLite-3.2, managedBeans-1.0, servlet-3.1, jsf-2.2, beanValidation-1.1, ssl-1.0, jndi-1.0, localConnector-1.0, appSecurity-2.0, jsonp-1.0, jdbc-4.1, jaxrs-2.0, el-3.0, jaxrsClient-2.0, json-1.0, jpaContainer-2.1, cdi-1.2, distributedMap-1.0, webProfile-7.0, websocket-1.1, jpa-2.1].
+[11/28/17 22:41:33:201 CST] 0000001a com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: La actualización de características se ha completado en 20.523 segundos.
+[11/28/17 22:41:33:201 CST] 0000001a com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: El servidor WebServer está preparado para ejecutar un planeta más inteligente.
+[11/28/17 22:41:33:205 CST] 0000001b com.ibm.ws.util                                              I SESN0172I: El gestor de sesiones está utilizando la implementación de SecureRandom Java por omisión para la generación del ID de sesión.
+[11/28/17 22:41:33:672 CST] 0000001b com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: La memoria caché dinámica (memoria caché de objeto) se ha inicializado correctamente.
+[11/28/17 22:41:33:715 CST] 0000002e com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: Se ha generado automáticamente un archivo de configuración para un plug-in de servidor web para este servidor en /Users/Jai/Library/Mobile Documents/com~apple~CloudDocs/Datos I/TEC Messenger/wlp/usr/servers/WebServer/logs/state/plugin-cfg.xml.
+[11/28/17 22:42:04:120 CST] 0000003a com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [org.tec.datos1.messenger.webapi] [/webapi] [RESTful Jersey Servlet]: Inicialización satisfactoria.
+[11/28/17 22:45:38:445 CST] 00000045 SystemOut                                                    O org.tec.datos1.messenger.estructures.Edge@38ef196b
+[11/28/17 22:45:38:448 CST] 00000045 SystemOut                                                    O org.tec.datos1.messenger.estructures.Edge@48e1cf8f
+[11/28/17 22:45:38:467 CST] 00000045 com.ibm.ws.webcontainer.util.ApplicationErrorUtils           E SRVE0777E: Excepción lanzada por la clase de aplicación 'org.glassfish.jersey.servlet.WebComponent.serviceImpl:432'
+javax.servlet.ServletException: java.util.ConcurrentModificationException
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:432)
+	at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:370)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:389)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:342)
+	at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:229)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.service(ServletWrapper.java:1255)
+	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:743)
 	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:440)
 	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1138)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4938)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:316)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:990)
+	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1004)
+	at com.ibm.ws.webcontainer.servlet.CacheServletWrapper.handleRequest(CacheServletWrapper.java:76)
+	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:921)
 	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:281)
 	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:960)
 	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:362)
@@ -530,89 +492,37 @@ process = 15200@Macbook-Pro-de-Jasson.local
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.lang.ClassNotFoundException: org.jvnet.mimepull.MIMEParsingException
-	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:504)
-	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:276)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:482)
-	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:443)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	... 52 more
-
-[11/26/17 20:54:55:406 CST] 00000018 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "javax.servlet.ServletException: SRVE0207E: No se ha detectado la excepción de inicialización creada por el servlet com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters 1064" en ffdc_17.11.26_20.54.55.1.log
-[11/26/17 20:54:55:410 CST] 00000018 com.ibm.ws.webcontainer.webapp                               E SRVE0315E: Se ha producido una excepción: java.lang.Throwable: javax.servlet.ServletException: SRVE0207E: No se ha detectado la excepción de inicialización creada por el servlet
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4982)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.handleRequest(DynamicVirtualHost.java:316)
-	at com.ibm.ws.webcontainer.WebContainer.handleRequest(WebContainer.java:990)
-	at com.ibm.ws.webcontainer.osgi.DynamicVirtualHost$2.run(DynamicVirtualHost.java:281)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink$TaskWrapper.run(HttpDispatcherLink.java:960)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.wrapHandlerAndExecute(HttpDispatcherLink.java:362)
-	at com.ibm.ws.http.dispatcher.internal.channel.HttpDispatcherLink.ready(HttpDispatcherLink.java:321)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleDiscrimination(HttpInboundLink.java:499)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.handleNewRequest(HttpInboundLink.java:433)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.processRequest(HttpInboundLink.java:313)
-	at com.ibm.ws.http.channel.internal.inbound.HttpInboundLink.ready(HttpInboundLink.java:284)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.sendToDiscriminators(NewConnectionInitialReadCallback.java:165)
-	at com.ibm.ws.tcpchannel.internal.NewConnectionInitialReadCallback.complete(NewConnectionInitialReadCallback.java:74)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.requestComplete(WorkQueueManager.java:503)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.attemptIO(WorkQueueManager.java:573)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager.workerRun(WorkQueueManager.java:928)
-	at com.ibm.ws.tcpchannel.internal.WorkQueueManager$Worker.run(WorkQueueManager.java:1017)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: javax.servlet.ServletException: SRVE0207E: No se ha detectado la excepción de inicialización creada por el servlet
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:366)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:598)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.handleRequest(ServletWrapper.java:440)
-	at com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters(WebAppFilterManager.java:1138)
-	at com.ibm.ws.webcontainer.webapp.WebApp.handleRequest(WebApp.java:4938)
-	... 19 more
-Caused by: java.lang.NoClassDefFoundError: org/jvnet/mimepull/MIMEParsingException
-	at java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
-	at java.lang.Class.getDeclaredMethods(Class.java:1975)
-	at org.glassfish.jersey.server.model.IntrospectionModeller$2.run(IntrospectionModeller.java:255)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.glassfish.jersey.server.model.IntrospectionModeller.getAllDeclaredMethods(IntrospectionModeller.java:249)
-	at org.glassfish.jersey.server.model.IntrospectionModeller.checkForNonPublicMethodIssues(IntrospectionModeller.java:174)
-	at org.glassfish.jersey.server.model.IntrospectionModeller.doCreateResourceBuilder(IntrospectionModeller.java:121)
-	at org.glassfish.jersey.server.model.IntrospectionModeller.access$000(IntrospectionModeller.java:82)
-	at org.glassfish.jersey.server.model.IntrospectionModeller$1.call(IntrospectionModeller.java:114)
-	at org.glassfish.jersey.server.model.IntrospectionModeller$1.call(IntrospectionModeller.java:111)
+Caused by: java.util.ConcurrentModificationException
+	at java.util.LinkedList$ListItr.checkForComodification(LinkedList.java:966)
+	at java.util.LinkedList$ListItr.next(LinkedList.java:888)
+	at org.tec.datos1.messenger.webapi.resources.Network.getNetwork(Network.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:76)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:148)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:191)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:200)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:103)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:493)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:415)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:104)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:277)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:272)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:268)
 	at org.glassfish.jersey.internal.Errors.process(Errors.java:316)
 	at org.glassfish.jersey.internal.Errors.process(Errors.java:298)
-	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:256)
-	at org.glassfish.jersey.server.model.IntrospectionModeller.createResourceBuilder(IntrospectionModeller.java:111)
-	at org.glassfish.jersey.server.model.Resource.from(Resource.java:800)
-	at org.glassfish.jersey.server.ResourceBagConfigurator.init(ResourceBagConfigurator.java:79)
-	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:354)
-	at org.glassfish.jersey.server.ApplicationHandler.lambda$initialize$1(ApplicationHandler.java:316)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:316)
-	at org.glassfish.jersey.internal.Errors.process(Errors.java:298)
-	at org.glassfish.jersey.internal.Errors.processWithException(Errors.java:256)
-	at org.glassfish.jersey.server.ApplicationHandler.initialize(ApplicationHandler.java:315)
-	at org.glassfish.jersey.server.ApplicationHandler.<init>(ApplicationHandler.java:282)
-	at org.glassfish.jersey.servlet.WebComponent.<init>(WebComponent.java:335)
-	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:178)
-	at org.glassfish.jersey.servlet.ServletContainer.init(ServletContainer.java:370)
-	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
-	at com.ibm.ws.webcontainer.servlet.ServletWrapper.init(ServletWrapper.java:297)
-	... 23 more
-Caused by: java.lang.ClassNotFoundException: org.jvnet.mimepull.MIMEParsingException
-	at com.ibm.ws.classloading.internal.AppClassLoader.findClassCommonLibraryClassLoaders(AppClassLoader.java:504)
-	at com.ibm.ws.classloading.internal.AppClassLoader.findClass(AppClassLoader.java:276)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at com.ibm.ws.classloading.internal.AppClassLoader.findOrDelegateLoadClass(AppClassLoader.java:482)
-	at com.ibm.ws.classloading.internal.AppClassLoader.loadClass(AppClassLoader.java:443)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	... 52 more
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:268)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:289)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:256)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:703)
+	at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:416)
+	... 28 more
 
-[11/26/17 22:30:45:923 CST] 0000009c com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
-[11/26/17 22:30:45:936 CST] 0000009d com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: El canal TCP defaultHttpEndpoint ha detenido la escucha de solicitudes en el host *  (IPv6) puerto 9080.
-[11/26/17 22:30:45:940 CST] 0000009d com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Aplicación web eliminada (default_host): http://192.168.100.5:9080/webapi/
-[11/26/17 22:30:45:948 CST] 0000009c com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
-[11/26/17 22:30:46:155 CST] 00000098 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: La aplicación org.tec.datos1.messenger.webapi se ha detenido correctamente.
-[11/26/17 22:30:46:255 CST] 0000009c com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0009I: El servicio de seguridad se ha detenido.
-[11/26/17 22:30:46:316 CST] 0000009c ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1124I: Se ha desactivado el plugin de autenticación colectiva con el nombre de clase NullCollectiveAuthenticationPlugin. 
-[11/26/17 22:30:48:309 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server WebServer stopped after 9 minutes, 38.512 seconds.
+[11/28/17 22:45:38:533 CST] 00000045 com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: Se ha creado una incidencia FFDC: "javax.servlet.ServletException: java.util.ConcurrentModificationException com.ibm.ws.webcontainer.filter.WebAppFilterManager.invokeFilters 1064" en ffdc_17.11.28_22.45.38.0.log
+[11/28/17 22:45:38:536 CST] 00000045 com.ibm.ws.webcontainer.srt                                  W WARNING: Cannot set status. Response already committed.
+[11/28/17 22:45:38:537 CST] 00000045 com.ibm.ws.webcontainer.srt                                  W SRVE8094W: AVISO: No se puede establecer la cabecera. Ya se confirmado la respuesta.  Seguimiento de la pila de intento errante para establecer la: 
+        at com.ibm.ws.webcontainer.srt.SRTServletResponse.addHeader(SRTServletResponse.java:2164)
+        at [internal classes].(Unknown Source)
+
