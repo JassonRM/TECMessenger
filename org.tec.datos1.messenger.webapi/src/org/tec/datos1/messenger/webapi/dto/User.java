@@ -8,6 +8,14 @@ public class User implements Comparable<User>{
 	String path;
 	public ArrayList<String> files = new ArrayList<>();
 	ArrayList<Message> toReceive = new ArrayList<>();;
+	public Boolean changes = false;
+	public void swichChange() {
+		if(changes) {
+			changes = false;
+		}else {
+			changes = true;
+		}
+	}
 	public void addFileName(String file) {
 		files.add(file);
 	}

@@ -48,7 +48,7 @@ public class Auth {
 		
 		users.addVertex(newUser);
 		users.reconnect();
-		
+		GodObserver.notifyAllUsers();
 		return Response.ok().build();
 	}
 	
@@ -67,8 +67,21 @@ public class Auth {
 		String ipAddress = request.getRemoteAddr();
 		if(users != null) {
 			users.removeVertexByIpAddress(ipAddress);
+			GodObserver.notifyAllUsers();
 			return Response.ok("Logout successful").build();
 		}
 		return Response.noContent().build();
+	}
+	@GET
+	public Response consultChanges(@Context HttpServletRequest request) {
+		String ipAddress = request.getRemoteAddr();
+		User ipUser = users.searchByIpAddress(ipAddress);
+		if(ipUser.changes) {
+			ipUser.swichChange();
+			return Response.ok().build();
+		}
+		else {
+			return Response.serverError().build();
+		}
 	}
 }
