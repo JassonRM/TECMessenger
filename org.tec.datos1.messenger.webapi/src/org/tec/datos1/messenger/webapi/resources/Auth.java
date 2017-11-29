@@ -24,14 +24,15 @@ public class Auth {
 	 * @return
 	 */
 	@POST
-	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response login(@Context HttpServletRequest request, User newUser) {
+	public Response login(@Context HttpServletRequest request) {
 		String ipAddress = request.getRemoteAddr();
-
+		String userName = request.getParameter("Name");
+		System.out.println(userName);
 		if(users != null) {
-			User user = users.searchByUsername(newUser.getUsername());
+			User user = users.searchByUsername(userName);
 			if(user != null){
+				System.out.println("No usuario");
 				return Response.status(401).build();
 			}
 			User ipUser = users.searchByIpAddress(ipAddress);
@@ -40,7 +41,7 @@ public class Auth {
 			}
 			
 		}
-
+		User newUser = new User(userName,ipAddress);
 		newUser.setIpAddress(ipAddress);
 		if(users == null) {
 			users = new Network();
@@ -49,6 +50,7 @@ public class Auth {
 		users.addVertex(newUser);
 		users.reconnect();
 		GodObserver.notifyAllUsers();
+		System.out.println(userName);
 		return Response.ok().build();
 	}
 	

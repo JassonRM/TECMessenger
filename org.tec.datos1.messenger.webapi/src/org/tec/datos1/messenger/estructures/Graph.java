@@ -2,7 +2,12 @@ package org.tec.datos1.messenger.estructures;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-
+/**
+ * clase base del grafo
+ * @author kenne
+ *
+ * @param <T>
+ */
 public class Graph<T extends Comparable<T>> {
 	
 	protected LinkedList<Vertex<T>> vertices = new LinkedList<>();
@@ -31,6 +36,7 @@ public class Graph<T extends Comparable<T>> {
 		Vertex<T> secondVertex = new Vertex<>(newVertex);
 		vertices.add(index,secondVertex);
 		if (adjacentVertex == null) {
+			System.out.println("Se anadio de forma correcta");
 			return;
 		}
 		for (Vertex<T> current : vertices) {

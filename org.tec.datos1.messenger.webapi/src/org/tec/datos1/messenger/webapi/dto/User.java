@@ -9,6 +9,10 @@ public class User implements Comparable<User>{
 	public ArrayList<String> files = new ArrayList<>();
 	ArrayList<Message> toReceive = new ArrayList<>();;
 	public Boolean changes = false;
+	public User(String user,String Ip) {
+		this.username = user;
+		this.ipAddress = Ip;
+	}
 	public void swichChange() {
 		if(changes) {
 			changes = false;
