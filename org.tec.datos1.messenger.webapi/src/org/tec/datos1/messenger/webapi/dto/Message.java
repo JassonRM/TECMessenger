@@ -2,7 +2,7 @@ package org.tec.datos1.messenger.webapi.dto;
 
 import java.util.ArrayList;
 
-public class Message {
+public class Message implements Comparable<Message>{
 	private String receiver;
 	private String sender;
 	private String date;
@@ -22,18 +22,6 @@ public class Message {
 	}
 	public void setReceiver(String destinatario) {
 		this.receiver = destinatario;
-	}
-	public String getContent() {
-		return body;
-	}
-	public void setContent(String content) {
-		this.body = content;
-	}
-	public String getOthers() {
-		return image;
-	}
-	public void setOthers(String others) {
-		this.image = others;
 	}
 	public String getSender() {
 		return sender;
@@ -70,5 +58,26 @@ public class Message {
 	}
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	@Override
+	public int compareTo(Message object) {
+		if (object.receiver.compareTo(receiver) != 0) {
+			return object.receiver.compareTo(receiver);
+		}else if(object.sender.compareTo(sender) != 0) {
+			return object.sender.compareTo(sender);
+		}else if(object.date.compareTo(date) != 0) {
+			return object.date.compareTo(date);
+		}else if(object.Audio.compareTo(Audio) != 0) {
+			return object.Audio.compareTo(Audio);
+		}else if(object.File.compareTo(File) != 0) {
+			return object.File.compareTo(File);
+		}else if(object.body.compareTo(body) != 0) {
+			return object.body.compareTo(body);
+		}else if(object.image.compareTo(image) != 0) {
+			return object.image.compareTo(image);
+		}else {
+			return 0;
+		}
 	}
 }
