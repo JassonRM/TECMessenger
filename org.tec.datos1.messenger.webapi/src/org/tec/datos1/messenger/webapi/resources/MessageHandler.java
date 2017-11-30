@@ -31,8 +31,10 @@ public class MessageHandler {
 		
 		User usuario = Auth.users.searchByIpAddress(request.getRemoteAddr());
 		try {
+			Message mensaje =usuario.getMessages().get(0);
+			usuario.getMessages().remove(0);
 		return Response.ok()
-				.entity(usuario.getMessages())
+				.entity(mensaje)
 				.build();}
 		catch(Exception e) {
 			Response.noContent().build();
