@@ -9,7 +9,10 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.glassfish.jersey.media.multipart.MultiPart;
 import org.tec.datos1.messenger.webapi.dto.User;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,6 +25,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.ResponseBuilder;
 
 @Path("/messages/files")
 public class MultiFileHandler {
@@ -92,33 +96,46 @@ public class MultiFileHandler {
 	
 	
 	@GET
-	@Produces("multipart/mixed")
-	public Response getFile(@Context HttpServletRequest request) {
-		if(request ==null) {
-			System.out.println("ERROR");
-			return null;
-		}
-		
-		User usuario = Auth.users.searchByIpAddress(request.getRemoteAddr());
-		try {
-			
-			File objFile = new File(usuario.getFiles().get(0));
-			usuario.getFiles().remove(0);
-			
-			MultiPart objMultiPart = new MultiPart();
-			
-			objMultiPart.type(new MediaType("multipart", "mixed"));
-			
-			objMultiPart.bodyPart(objFile.getName(), new MediaType("text", "plain"));
-			
-			objMultiPart.bodyPart(objFile.length(), new MediaType("text", "plain"));
-			
-			objMultiPart.bodyPart(objFile, new MediaType("multipart", "mixed"));
+	@Path("/download")
+	@Produces(MediaType.APPLICATION_OCTET_STREAM)
+	public Response getFile(@Context HttpServletRequest request) throws IOException {
+
+        File file = new File("directorio");
+        ResponseBuilder response = Response.ok((Object) file);
+        response.header("Content-Disposition", "attachment;filename=");
+        return response.build();
+    }
+//		File objFile = new File();
+//				  return Response.ok(objFile, MediaType.APPLICATION_OCTET_STREAM)
+//				      .header("Content-Disposition", "attachment; filename=\"" + objFile.getName() + "\"" ) //optional
+//				      .build();
+//		 
+		 
+//		if(request ==null) {
+//			System.out.println("ERROR");
+//			return null;
+//		}
+//		
+//		//User usuario = Auth.users.searchByIpAddress(request.getRemoteAddr());  usuario.getFiles().get(0)
+//		try {
+//			
+//			
+////			usuario.getFiles().remove(0);
+//			
+//			MultiPart objMultiPart = new MultiPart();
+//			
+//			objMultiPart.type(new MediaType("multipart", "mixed"));
+//			
+//			objMultiPart.bodyPart(objFile.getName(), new MediaType("text", "plain"));
+//			
+//			objMultiPart.bodyPart(objFile.length(), new MediaType("text", "plain"));
+//			
+//			objMultiPart.bodyPart(objFile, new MediaType("multipart", "mixed"));
+//	
+//			return Response.ok(objMultiPart).build();
+//		}catch(Exception e) {
+//			return Response.noContent().build();
+//		}
 	
-			return Response.ok(objMultiPart).build();
-		}catch(Exception e) {
-			return Response.noContent().build();
-		}
-	}
 		
 }
