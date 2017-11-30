@@ -18,7 +18,6 @@ public class User implements Comparable<User>{
 	public BinaryTree<Message> bridgeMessages = new BinaryTree<>();
 	public BTree<Message> receivedMessages = new BTree<>(5);
 	
-	private ArrayList<String> files = new ArrayList<>();
 	ArrayList<Message> toReceive = new ArrayList<>();;
 	public Boolean changes = false;
 
@@ -34,9 +33,7 @@ public class User implements Comparable<User>{
 			changes = true;
 		}
 	}
-	public void addFileName(String file) {
-		getFiles().add(file);
-	}
+
 	public String getUsername() {
 		return username;
 	}
@@ -68,12 +65,6 @@ public class User implements Comparable<User>{
 		toReceive.clear();
 	}
 
-	public ArrayList<String> getFiles() {
-		return files;
-	}
-	public void setFiles(ArrayList<String> files) {
-		this.files = files;
-	}
 	@Override
 	public int compareTo(User o) {
 		// TODO Auto-generated method stub
