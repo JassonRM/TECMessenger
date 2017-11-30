@@ -98,4 +98,24 @@ public class MessageHandler {
 		
 	}
 	
+	@Path("/messages/search")
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response findMessage(@Context HttpServletRequest request) {
+		if(request ==null) {
+			System.out.println("ERROR no");
+			return null;
+		}
+		
+		String buscado = request.getParameter("buscado");
+		User user = Auth.users.searchByIpAddress(request.getRemoteAddr());
+		ArrayList<Message> messages = user.searchMessages(buscado);
+		
+		try {
+			return Response.ok().entity(messages).build();}
+		catch(Exception e) {
+			Response.noContent().build();
+		}
+		return null;
+	} 
 }

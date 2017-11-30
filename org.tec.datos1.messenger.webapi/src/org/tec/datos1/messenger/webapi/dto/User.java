@@ -90,4 +90,12 @@ public class User implements Comparable<User>{
 		}
 		
 	}
+	public ArrayList<Message> searchMessages(String buscado) {
+		ArrayList<Message> result = new ArrayList<>();
+		sentMessages.searchMessages(buscado,result);
+		errorSentMessages.searchMessages(buscado,result);
+		bridgeMessages.searchMessages(buscado,result);
+		receivedMessages.searchMessages(buscado,result);
+		return result;
+	}
 }

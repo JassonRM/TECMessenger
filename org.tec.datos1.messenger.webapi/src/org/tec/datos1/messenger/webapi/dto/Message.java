@@ -23,18 +23,6 @@ public class Message implements Comparable<Message>{
 	public void setReceiver(String destinatario) {
 		this.receiver = destinatario;
 	}
-	public String getContent() {
-		return body;
-	}
-	public void setContent(String content) {
-		this.body = content;
-	}
-	public String getOthers() {
-		return image;
-	}
-	public void setOthers(String others) {
-		this.image = others;
-	}
 	public String getSender() {
 		return sender;
 	}

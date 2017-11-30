@@ -1,5 +1,10 @@
 package org.tec.datos1.messenger.estructures;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.tec.datos1.messenger.webapi.dto.Message;
+
 public class BTree<T extends Comparable<T>> {
 	
 	private BTreePage<T> root;
@@ -107,17 +112,37 @@ public class BTree<T extends Comparable<T>> {
 
 	private void deleteRecursive(T value, BTreePage<T> page) {}
 	
-//	public void print(BTreePage<T> page, int depth) {
-//		System.out.println("depth: "  + depth);
-//		
-//		for (T key : page.getKeys()) {
-//			System.out.println(key);
-//		}
-//		if (!page.isLeaf()) {
-//			for (BTreePage<T> branch : page.getBranches()) {
-//				print(branch, depth+1);
-//			}
-//		}
-//	}
+	public void searchMessages(String buscado, ArrayList<Message> result) {
+		searchMessagesAux(buscado,result,root);
+		
+	}
+
+	private void searchMessagesAux(String buscado, ArrayList<Message> result, BTreePage<T> node) {
+		if (node == null) {return;}
+		
+		@SuppressWarnings("unchecked")
+		List<Message> nodes = (List<Message>) node.getKeys();
+		if (nodes == null) {return;}
+		for (Message node2 : nodes) {
+			if (buscado.equals(node2.getReceiver()) || buscado.equals(node2.getSender()) 
+					|| buscado.equals(node2.getAudio()) || buscado.equals(node2.getImage())
+					|| buscado.equals(node2.getFile()) || buscado.equals(node2.getDate())){
+				result.add(node2);
+			}else {
+				for (String word : node2.getBody().split(" ")) {
+					if (buscado.equals(word)) {
+						result.add(node2);
+						break;
+					}
+				}
+			}
+		}
+		for (BTreePage<T> branch : node.getBranches()) {
+			searchMessagesAux(buscado, result,branch);
+		}
+		
+		
+		
+	}
 	
 }

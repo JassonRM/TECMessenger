@@ -1,5 +1,9 @@
 package org.tec.datos1.messenger.estructures;
 
+import java.util.ArrayList;
+
+import org.tec.datos1.messenger.webapi.dto.Message;
+
 public class SplayTree<T extends Comparable<T>> {
 	
     private SplayTreeNode<T> root;
@@ -198,6 +202,31 @@ public class SplayTree<T extends Comparable<T>> {
         node.setRight(rotateLeftChild(auxiliar));  
         node = rotateRightChild(node);
         return node;
+	}
+
+	public void searchMessages(String buscado, ArrayList<Message> result) {
+		searchMessagesAux(buscado,result,root);
+		
+	}
+
+	private void searchMessagesAux(String buscado, ArrayList<Message> result, SplayTreeNode<T> node) {
+		if (node == null) {return;}
+		Message node2 = (Message)node.getValue();
+		if (buscado.equals(node2.getReceiver()) || buscado.equals(node2.getSender()) 
+				|| buscado.equals(node2.getAudio()) || buscado.equals(node2.getImage())
+				|| buscado.equals(node2.getFile()) || buscado.equals(node2.getDate())){
+			result.add(node2);
+		}else {
+			for (String word : node2.getBody().split(" ")) {
+				if (buscado.equals(word)) {
+					result.add(node2);
+					break;
+				}
+			}
+		}
+		searchMessagesAux(buscado, result,node.getLeft());
+		searchMessagesAux(buscado, result,node.getRight());
+		
 	}
 	
 }
