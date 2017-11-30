@@ -11,12 +11,14 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.servlet.http.HttpServletRequest;
 
+import org.tec.datos1.messenger.estructures.Cola;
 import org.tec.datos1.messenger.estructures.Network;
 import org.tec.datos1.messenger.webapi.dto.User;
 
 @Path("/auth")
 public class Auth {
 	public static Network users = new Network();
+	public static Cola<String> cola = new Cola<>();
 	/**
 	 * Usuario envia un request al server generando un nuevo nodo en el grafo del server
 	 * @param request
@@ -64,7 +66,8 @@ public class Auth {
 		}
 	}
 	
-	@DELETE
+	@POST
+	@Path("/logOut")
 	public Response logout(@Context HttpServletRequest request) {
 		String ipAddress = request.getRemoteAddr();
 		if(users != null) {

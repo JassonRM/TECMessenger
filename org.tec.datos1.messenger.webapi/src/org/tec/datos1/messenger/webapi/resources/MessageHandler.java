@@ -68,22 +68,23 @@ public class MessageHandler {
 		}
 		Vertex<User> receiver = Auth.users.searchByUsernameNode(message.getReceiver());
 		//Determino el siguiente usuario al que debo de enviarlo
-		if( (message.getAudio() != null && !message.getAudio().equals(""))  ) {
-			receiver.getValue().addFileName(message.getAudio());
+		if( (message.getAudio() != null && !message.getAudio().equals("") && message.getPath().get(0).equals(receiver.getValue().getUsername()))  ) {
+			Auth.cola.queue(message.getAudio());
 			
 		}
-		if( (message.getImage() != null && !message.getImage().equals(""))  ) {
-			receiver.getValue().addFileName(message.getImage());
+		if( (message.getImage() != null && !message.getImage().equals("")) && message.getPath().get(0).equals(receiver.getValue().getUsername()))   {
+			Auth.cola.queue(message.getImage());
 			
 		}
-		if( (message.getFile() != null && !message.getFile().equals(""))  ) {
-			receiver.getValue().addFileName(message.getFile());
+		if( (message.getFile() != null && !message.getFile().equals("")) && message.getPath().get(0).equals(receiver.getValue().getUsername()) ) {
+			Auth.cola.queue(message.getFile());
 			
 		}
 		
 		User nextNode = Auth.users.searchByUsername(message.getPath().get(0));
 		//Lo elimino
 		message.getPath().remove(0);
+		
 		//Lo anado al usuario para que lo reenvie posteriormente al detectar que no es el usuario al que se supone le debe enviar
 		nextNode.addMessage(message);
 		return Response.ok()

@@ -100,42 +100,9 @@ public class MultiFileHandler {
 	@Produces(MediaType.APPLICATION_OCTET_STREAM)
 	public Response getFile(@Context HttpServletRequest request) throws IOException {
 
-        File file = new File("directorio");
+        File file = new File("directorio" + Auth.cola.dequeue());
         ResponseBuilder response = Response.ok((Object) file);
         response.header("Content-Disposition", "attachment;filename=");
         return response.build();
-    }
-//		File objFile = new File();
-//				  return Response.ok(objFile, MediaType.APPLICATION_OCTET_STREAM)
-//				      .header("Content-Disposition", "attachment; filename=\"" + objFile.getName() + "\"" ) //optional
-//				      .build();
-//		 
-		 
-//		if(request ==null) {
-//			System.out.println("ERROR");
-//			return null;
-//		}
-//		
-//		//User usuario = Auth.users.searchByIpAddress(request.getRemoteAddr());  usuario.getFiles().get(0)
-//		try {
-//			
-//			
-////			usuario.getFiles().remove(0);
-//			
-//			MultiPart objMultiPart = new MultiPart();
-//			
-//			objMultiPart.type(new MediaType("multipart", "mixed"));
-//			
-//			objMultiPart.bodyPart(objFile.getName(), new MediaType("text", "plain"));
-//			
-//			objMultiPart.bodyPart(objFile.length(), new MediaType("text", "plain"));
-//			
-//			objMultiPart.bodyPart(objFile, new MediaType("multipart", "mixed"));
-//	
-//			return Response.ok(objMultiPart).build();
-//		}catch(Exception e) {
-//			return Response.noContent().build();
-//		}
-	
-		
+    }	
 }
