@@ -46,17 +46,21 @@ public class Network extends Graph<User> {
 	 * Reconecta un camino que a sido cortado en la eliminacion de algun nodo.
 	 */
 	public void reconnect() {
-		Random randomGenerator = new Random();
-		for(Vertex<User> nodo : getVertices()) {
-			int count = 0;
-			Vertex<User> second = getVertices().get(randomGenerator.nextInt(Math.max(getVertices().size() - 1, 1)));
-			System.out.println(getVertices().size());
-			while(count < 3 && getVertices().size() - count > 1) {
-				if(second != nodo) {
-					nodo.addEdge(new Edge<User>(second, randomGenerator.nextInt(20)));
+		if(getVertices().size() > 1) {
+			Random randomGenerator = new Random();
+			for(Vertex<User> nodo : getVertices()) {
+				nodo.disconnect();
+				int count = 0;
+				while(count < 3 && getVertices().size() - count > 1) {
+					Vertex<User> second = getVertices().get(randomGenerator.nextInt(Math.max(getVertices().size() - 1, 1)));
+					if(second != nodo) {
+						nodo.addEdge(new Edge<User>(second, randomGenerator.nextInt(20)));
+					}
+					count++;
 				}
-				count++;
 			}
+		}else if(getVertices().size() == 1){
+			getVertices().get(0).disconnect();
 		}
 	}
 	

@@ -34,4 +34,8 @@ public class Vertex<T extends Comparable<T>> {
 		return result;
 	}
 	
+	public void disconnect() {
+		edges = new LinkedList<>();
+	}
+	
 }

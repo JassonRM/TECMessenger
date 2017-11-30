@@ -1,7 +1,5 @@
 package org.tec.datos1.messenger.webapi.resources;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -39,7 +37,9 @@ public class Auth {
 	public Response login(@Context HttpServletRequest request) {
 		String ipAddress = request.getRemoteAddr();
 		String userName = request.getParameter("Name");
-		System.out.println(userName);
+		if (userName == null) {
+			return Response.status(409).build();
+		}
 		if(users != null) {
 			User user = users.searchByUsername(userName);
 			if(user != null){
@@ -62,7 +62,6 @@ public class Auth {
 		users.addVertex(newUser);
 		users.reconnect();
 		GodObserver.notifyAllUsers();
-		System.out.println(userName);
 		return Response.ok().build();
 	}
 	

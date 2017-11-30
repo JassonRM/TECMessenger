@@ -36,7 +36,6 @@ public class Graph<T extends Comparable<T>> {
 		Vertex<T> secondVertex = new Vertex<>(newVertex);
 		vertices.add(index,secondVertex);
 		if (adjacentVertex == null) {
-			System.out.println("Se anadio de forma correcta");
 			return;
 		}
 		for (Vertex<T> current : vertices) {
