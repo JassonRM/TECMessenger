@@ -10,9 +10,18 @@ import org.tec.datos1.messenger.estructures.Vertex;
 import org.tec.datos1.messenger.webapi.dto.Message;
 import org.tec.datos1.messenger.webapi.dto.User;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -44,13 +53,16 @@ public class MessageHandler {
 	
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
 	/**
 	 * Recibe un mensaje, si no viene con un path se determina un path y se envia al usuario
 	 * @param message
 	 * @return
 	 */
-	public Response createMessage(Message message) {
+	public Response createMessage(@Context HttpServletRequest request) throws JsonParseException, JsonMappingException, IOException {
+		String message2 = request.getParameter("json");
+		ObjectMapper mapper = new ObjectMapper();
+		Message message = mapper.readValue(message2, Message.class);
+		System.out.println(message.getBody());
 		try {
 		//Esto es cuando se recibe el mensaje al server por primera vez, se determina el path de un solo 
 		if(message.getPath() == null || message.getPath().isEmpty()) {
