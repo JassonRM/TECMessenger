@@ -62,7 +62,8 @@ public class MessageHandler {
 		String message2 = request.getParameter("json");
 		ObjectMapper mapper = new ObjectMapper();
 		Message message = mapper.readValue(message2, Message.class);
-		System.out.println(message.getBody());
+		
+		
 		try {
 		//Esto es cuando se recibe el mensaje al server por primera vez, se determina el path de un solo 
 		if(message.getPath() == null || message.getPath().isEmpty()) {
@@ -70,6 +71,9 @@ public class MessageHandler {
 			//Determino los dos nodos que son el que recibe y el que envia
 			Vertex<User> sender = Auth.users.searchByUsernameNode(message.getSender());
 			Vertex<User> receiver = Auth.users.searchByUsernameNode(message.getReceiver());
+			if(receiver == null) {
+				return Response.ok("Invalid receiver").build();
+			}
 			//Saco la lista de nodos a los cuales tiene que pasar hasta llegar
 			LinkedList<Vertex<User>> list = Auth.users.Floyd(sender, receiver);
 			ArrayList<String> names = new ArrayList<>();

@@ -43,18 +43,16 @@ public class Auth {
 		if(users != null) {
 			User user = users.searchByUsername(userName);
 			if(user != null){
-				System.out.println("No usuario");
-				return Response.status(401).build();
+				return Response.ok("Username Error").build();
 			}
 			User ipUser = users.searchByIpAddress(ipAddress);
 			if(ipUser != null) {
-				return Response.status(409).build();
+				return Response.ok("IP Error").build();
 			}
-			
 		}
 		User newUser = new User(userName,ipAddress);
 		newUser.setIpAddress(ipAddress);
-		newUser.fillMessages();
+//		newUser.fillMessages();
 		if(users == null) {
 			users = new Network();
 		}
