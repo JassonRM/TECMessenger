@@ -24,6 +24,10 @@ public class User implements Comparable<User>{
 	public User(String user,String Ip) {
 		this.username = user;
 		this.ipAddress = Ip;
+		sentMessages = new SplayTree<>();
+		 errorSentMessages = new AVLTree<>();
+		bridgeMessages = new BinaryTree<>();
+		receivedMessages = new BTree<>(5);
 	}
 
 	public void swichChange() {
